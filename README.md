@@ -154,15 +154,32 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Proposal    |    H     |     3 hrs      |      hrs     |     hrs    |
+| Back-end Setup    |    H     |     3 hrs      |      hrs     |     hrs    |
+| Layout    |    H     |     3 hrs      |      hrs     |     hrs    |
+| Header   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Footer    |    L     |     3 hrs      |      hrs     |     hrs    |
+| Login/Register Form    |    L     |     3 hrs      |      hrs     |     hrs    |
+|  Movies   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Movie Detail   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Movie Create    |    L     |     3 hrs      |      hrs     |     hrs    |
+| Movie Edit    |    L     |     3 hrs      |      hrs     |     hrs    |
+| Review Create    |    H     |     3 hrs      |      hrs     |     hrs    |
+| Review Edit    |    L     |     3 hrs      |      hrs     |     hrs    |
+| Review Delete    |    L     |     3 hrs      |      hrs     |     hrs    |
+| Header CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Footer CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
+| Login/Register Form CSS    |    H     |     3 hrs      |      hrs     |     hrs    |
+|  Movies CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Movie Detail CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Movie Create CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
+| Movie Edit CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
+| Review Create CSS  |    H     |     3 hrs      |      hrs     |     hrs    |
+| Review Edit CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
+| Review Delete    |    L     |     3 hrs      |      hrs     |    hrs    |
+| TOTAL               |          |     69 hrs      |      hrs     |     TBD     |
 
 <br>
 
