@@ -1,9 +1,4 @@
-# healthy-tomatoes README
-
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+# README
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -24,7 +19,7 @@
 
 ## Overview
 
-_**Healthy Tomatoes** (inspired by rotten tomatoes) is an application that will allow users to access a list of movies with reviews written by the users themselves. People who access this app will create an account so that they may view and add movies they have watched. Movies added by the user will include the title, poster image, and a brief plot description. Aside from the details of the movie, each film will also contain a list of user reviews. Healthy Tomatoes allows the user to become a movie critic, as they write their own personal opinions on the movie and leave it with a rating to help other users decide what to watch next.
+**Healthy Tomatoes** (inspired by rotten tomatoes) is an application that will allow users to access a list of movies with reviews written by the users themselves. People who access this app will create an account so that they may view and add movies they have watched. Movies added by the user will include the title, poster image, and a brief plot description. Aside from the details of the movie, each film will also contain a list of user reviews. Healthy Tomatoes allows the user to become a movie critic, as they write their own personal opinions on the movie and leave it with a rating to help other users decide what to watch next.
 
 <br>
 
@@ -38,11 +33,15 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Full CRUD
+- Three tables (users, movies, reviews) with associations
+- Users can view all movies with corresponding movie details and reviews created by users
+- Users can add their movies and reviews
+- Users may edit movies
+- Users may remove reviews that only they created
+- Users table
+- Movies table
+- Reviews table (associated with movie_id and user_id)
 
 <br>
 
@@ -52,8 +51,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Splits up my components for easy file navigation |
+|   React Router   | Allows smooth transitions between all screens |
+Idk what these b
 | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
 |     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
 |  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
@@ -92,9 +92,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree](https://whimsical.com/project-4-hdtW2k6hZ8Ka6e7SQFsoU)
 
 #### Component Architecture
 
