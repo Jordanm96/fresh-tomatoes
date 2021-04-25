@@ -24,17 +24,59 @@
 <br>
 
 ## MVP
+### Planning
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+- README
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+### Server (Back End)
+
+- **RESTful JSON API**.
+  - 
+  - Build a **Ruby on Rails** server, exposing RESTful JSON endpoints.
+  - Build a database with at least 3 tables: users, movies, and reviews
+    - Association between users to movies and reviews, and movies to reviews
+  - Utilize **Rails** to define models for interacting with the database.
+  - Implement working generic controller actions for Full CRUD (`index`, `show`, `create`, `update`, `delete`) between tables
+
+### Client (Front End)
+
+- Have a working, interactive **React** app
+  - Have at least 8 separate, rendered components in an organized and understandable React file structure.
+  - Utilize functional or class React components appropriately.
+  - Utilize state and props in the components efficiently.
+- Consume data from my **Ruby on Rails API**, and render that data in my components.
+- Utilize **React Router**, for client-side routing.
+- Demonstrate Full CRUD actions ( `index`, `show`, `create`, `update`, and `delete` ) on the front end.
+
+### Styling
+
+- Be styled with CSS
+- Use Flexbox or Grid
+- Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
+
+### Linting
+
+- Indent properly.
+- Utilize high-quality, semantic variable names.
+- Follow `camelCase`, `snake_case`, and `kebab-case` convention.
+- Remove unnecessary boilerplate React files and code.
+- Remove all `console.log()`s and commented out code (functional notes and comments are okay).
+
+### Deployment
+
+- Deploy the fully functional front-end via Surge or Netlify.
+- Deploy the back-end via Heroku.
+
+### Procedural
+
+- Initialize a **git repo on Github**, with a link to my hosted project.
+- Have **frequent commits**, making a commit history at least every day. (75 commits minimum)
+- Use effective and safe **branching and merging** processes.
 
 <br>
 
 ### Goals
 
-- Full CRUD
-- Three tables (users, movies, reviews) with associations
 - Users can view all movies with corresponding movie details and reviews created by users
 - Users can add their movies and reviews
 - Users may edit movies
@@ -53,10 +95,8 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 | :--------------: | :----------------------------------------- |
 |      React       | Splits up my components for easy file navigation |
 |   React Router   | Allows smooth transitions between all screens |
-Idk what these b
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+| Axios | Used to access data from an API|
+| Bootstrap Library | Import premade styles for buttons and forms |
 
 <br>
 
@@ -130,9 +170,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+[ERD](https://app.diagrams.net/#G1995mcTTVAbj0lzZ1popNFQs90x2Zic-h)
 <br>
 
 ***
@@ -140,6 +178,8 @@ src
 ## Post-MVP
 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Get the average rating from all reviews and display it next to each movie
+- 
 
 ***
 
