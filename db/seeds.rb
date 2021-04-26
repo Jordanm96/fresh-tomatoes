@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+
+
+@user = User.create!(username: 'Jordan', email: 'jordmontero96@gmail.com', password: '123456')
+puts "#{User.count} users created."
+
+Movie.create!(title: 'Mortal Kombat', director: 'Simon McQuoid', info: '')
+Movie.create!(title: 'Avatar', director: 'James Cameron', info: '')
+Movie.create!(title: 'Mortal Kombat', director: 'Simon McQuoid', info: '')
+Movie.create!(title: 'Mortal Kombat', director: 'Simon McQuoid', info: '')
+Movie.create!(title: 'Mortal Kombat', director: 'Simon McQuoid', info: '')
