@@ -106,6 +106,12 @@
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
+
+[Desktop](https://xd.adobe.com/view/474406e6-dd09-4c5e-89a6-7177f040f47a-1217/)
+
+So I went to get another link but I have to upgrade. What should I do instead? Take screenshots and post to imgur or something like that?
+[Mobile](url)
+
 ![Dummy Link](url)
 
 - Desktop Landing
@@ -196,7 +202,7 @@ src
 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 - Get the average rating from all reviews and display it next to each movie
-- 
+- Conditional rendering a tomato or a splat for rotten in the review box
 
 ***
 
