@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_movie, only: [:show, :update, :destroy]
 
   # GET /movies
@@ -16,7 +17,7 @@ class MoviesController < ApplicationController
   # POST /movies
   def create
     @movie = Movie.new(movie_params)
-
+    @movie.user = @current_user
     if @movie.save
       render json: @movie, status: :created
     else
