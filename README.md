@@ -75,13 +75,21 @@
 
 #### Wireframes
 
-So I went to get another link but I have to upgrade. What should I do instead? Take screenshots and post to imgur or something like that?
-[Mobile](url)
-
 ![Sign Up Landing Screen](https://user-images.githubusercontent.com/78659139/116120460-65d7f100-a674-11eb-9dc1-fb19ec7baa65.png)
 
 ![Sign In Screen](https://user-images.githubusercontent.com/78659139/116120677-a7689c00-a674-11eb-8bf5-412115be49c5.png)
 
+![Movies Screen](https://user-images.githubusercontent.com/78659139/116135094-83fa1d00-a685-11eb-8568-605afda532c1.png)
+
+![MovieDetails Screen](https://user-images.githubusercontent.com/78659139/116135299-cfacc680-a685-11eb-8fb4-bf93f0479f36.png)
+
+![MovieEdit Screen](https://user-images.githubusercontent.com/78659139/116135427-ff5bce80-a685-11eb-84bc-25cc373122b0.png)
+
+![MovieCreate Screen](https://user-images.githubusercontent.com/78659139/116135484-0da9ea80-a686-11eb-8d5c-0c07e5311c38.png)
+
+![ReviewCreate Screen](https://user-images.githubusercontent.com/78659139/116135570-21ede780-a686-11eb-878a-056a4ea6b93f.png)
+
+![Mobile](https://user-images.githubusercontent.com/78659139/116134953-57460580-a685-11eb-8fec-feb3ae7e4f27.png)
 
 #### Component Tree
 
