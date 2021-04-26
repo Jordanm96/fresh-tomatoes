@@ -162,30 +162,28 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal    |    H     |     3 hrs      |      hrs     |     hrs    |
+| Proposal    |    H     |     1 hrs      |      hrs     |     hrs    |
 | Back-end Setup    |    H     |     3 hrs      |      hrs     |     hrs    |
 | Layout    |    H     |     3 hrs      |      hrs     |     hrs    |
-| Header   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Footer    |    L     |     3 hrs      |      hrs     |     hrs    |
+| Header   |    H     |     2 hrs      |      hrs     |     hrs    |
+| Footer    |    L     |     2 hrs      |      hrs     |     hrs    |
 | Login/Register Form    |    L     |     3 hrs      |      hrs     |     hrs    |
 |  Movies   |    H     |     3 hrs      |      hrs     |     hrs    |
 | Movie Detail   |    H     |     3 hrs      |      hrs     |     hrs    |
 | Movie Create    |    L     |     3 hrs      |      hrs     |     hrs    |
 | Movie Edit    |    L     |     3 hrs      |      hrs     |     hrs    |
 | Review Create    |    H     |     3 hrs      |      hrs     |     hrs    |
-| Review Edit    |    L     |     3 hrs      |      hrs     |     hrs    |
 | Review Delete    |    L     |     3 hrs      |      hrs     |     hrs    |
-| Header CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Footer CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
+| Header CSS   |    H     |     2 hrs      |      hrs     |     hrs    |
+| Footer CSS   |    L     |     1 hrs      |      hrs     |     hrs    |
 | Login/Register Form CSS    |    H     |     3 hrs      |      hrs     |     hrs    |
 |  Movies CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
 | Movie Detail CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
 | Movie Create CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
 | Movie Edit CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
 | Review Create CSS  |    H     |     3 hrs      |      hrs     |     hrs    |
-| Review Edit CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
-| Review Delete    |    L     |     3 hrs      |      hrs     |    hrs    |
-| TOTAL               |          |     69 hrs      |      hrs     |     TBD     |
+| Review Delete    |    L     |     1 hrs      |      hrs     |    hrs    |
+| TOTAL               |          |     54 hrs      |      hrs     |     TBD     |
 
 <br>
 
@@ -203,6 +201,7 @@ src
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 - Get the average rating from all reviews and display it next to each movie
 - Conditional rendering a tomato or a splat for rotten in the review box
+- Search bar on Movies page to find a specific movie
 
 ***
 
