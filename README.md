@@ -29,39 +29,23 @@
 
 - **RESTful JSON API**
   - Build a **Ruby on Rails** server, exposing RESTful JSON endpoints.
-  - Build a database with at least 3 tables: users, movies, and reviews
-    - Association between users to movies and reviews, and movies to reviews
+  - Build a database with 3 associated tables: users, movies, and reviews
   - Utilize **Rails** to define models for interacting with the database.
   - Implement working generic controller actions for Full CRUD (`index`, `show`, `create`, `update`, `delete`) between tables
+  - Include validations for user and movie creation
+  - Authenitcation for user sign-up and sign-in functionality
 
 ### Client (Front End)
 
 - Have a working, interactive **React** app
-  - Have at least 8 separate, rendered components in an organized and understandable React file structure.
-  - Utilize functional or class React components appropriately.
-  - Utilize state and props in the components efficiently.
 - Consume data from my **Ruby on Rails API**, and render that data in my components.
 - Utilize **React Router**, for client-side routing.
 - Demonstrate Full CRUD actions ( `index`, `show`, `create`, `update`, and `delete` ) on the front end.
 
 ### Styling
 
-- Be styled with CSS
 - Use Flexbox or Grid
 - Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
-
-### Linting
-
-- Indent properly.
-- Utilize high-quality, semantic variable names.
-- Follow `camelCase`, `snake_case`, and `kebab-case` convention.
-- Remove unnecessary boilerplate React files and code.
-- Remove all `console.log()`s and commented out code (functional notes and comments are okay).
-
-### Deployment
-
-- Deploy the fully functional front-end via Surge or Netlify.
-- Deploy the back-end via Heroku.
 
 <br>
 
@@ -69,11 +53,8 @@
 
 - Users can view all movies with corresponding movie details and reviews created by users
 - Users can add their movies and reviews
-- Users may edit movies
+- Users may edit movies that only they created
 - Users may remove reviews that only they created
-- Users table
-- Movies table
-- Reviews table (associated with movie_id and user_id)
 
 <br>
 
@@ -86,17 +67,13 @@
 |   React Router   | Allows smooth transitions between all screens |
 | Axios | Used to access data from an API|
 | Ruby on Rails | Backend MVC framework|
-| Pry | Testing the Backend|
-| Bootstrap Library | Import premade styles for buttons and forms |
+| Bootstrap | Import premade styles for buttons and forms |
 
 <br>
 
 ### Client (Front End)
 
 #### Wireframes
-
-[Desktop](https://xd.adobe.com/view/474406e6-dd09-4c5e-89a6-7177f040f47a-1217/)
-
 
 So I went to get another link but I have to upgrade. What should I do instead? Take screenshots and post to imgur or something like that?
 [Mobile](url)
@@ -200,7 +177,6 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 - Get the average rating from all reviews and display it next to each movie
 - Conditional rendering a tomato or a splat for rotten in the review box
 - Search bar on Movies page to find a specific movie
@@ -209,8 +185,7 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
