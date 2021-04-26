@@ -24,14 +24,10 @@
 <br>
 
 ## MVP
-### Planning
-
-- README
 
 ### Server (Back End)
 
-- **RESTful JSON API**.
-  - 
+- **RESTful JSON API**
   - Build a **Ruby on Rails** server, exposing RESTful JSON endpoints.
   - Build a database with at least 3 tables: users, movies, and reviews
     - Association between users to movies and reviews, and movies to reviews
@@ -96,6 +92,9 @@
 |      React       | Splits up my components for easy file navigation |
 |   React Router   | Allows smooth transitions between all screens |
 | Axios | Used to access data from an API|
+| Ruby on Rails | Backend MVC framework|
+| Pry | Testing the Backend|
+
 | Bootstrap Library | Import premade styles for buttons and forms |
 
 <br>
@@ -147,14 +146,43 @@ So I went to get another link but I have to upgrade. What should I do instead? T
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+|__ containers/
+      |__ MainContainer.jsx
 |__ components/
       |__ Header.jsx
+      |__ Footer.jsx
+      |__ Header.jsx
+      |__ MovieCard.jsx
+      |__ ReviewCard.jsx
+|__ layouts/
+      |__ Layout.jsx
+|__ screens/
+      |__ SignIn
+      |__ SignUp
+      |__ Movies
+            |__ Movies.jsx
+            |__ Movies.css
+      |__ MovieCreate
+            |__ MovieCreate.jsx
+            |__ MovieCreate.css
+      |__ MovieDetails
+            |__ MovieDetails.jsx
+            |__ MovieDetails.css
+            |__ Reviews
+              |__ Reviews.jsx
+              |__ Reviews.css
+      |__ MovieEdit
+            |__ MovieEdit.jsx
+            |__ MovieEdit.css
+      |__ ReviewCreate
+            |__ ReviewCreate.jsx
+            |__ ReviewCreate.css
 |__ services/
+      |__ auth.js
+      |__ movies.js
+      |__ reviews.js
+
+
 
 ```
 
