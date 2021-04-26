@@ -120,13 +120,19 @@ src
 |__ containers/
       |__ MainContainer.jsx
 |__ components/
-      |__ Header.jsx
-      |__ Footer.jsx
-      |__ Header.jsx
       |__ MovieCard.jsx
-      |__ ReviewCard.jsx
+            |__ MovieCard.jsx
+            |__ MovieCard.css
+      |__ ReviewCard
+            |__ ReviewCard.jsx
+            |__ ReviewCard.css
+      |__ Reviews
+            |__ Reviews.jsx
+            |__ Reviews.css
 |__ layouts/
       |__ Layout.jsx
+      |__ Header.jsx
+      |__ Footer.jsx
 |__ screens/
       |__ SignIn
       |__ SignUp
@@ -139,9 +145,6 @@ src
       |__ MovieDetails
             |__ MovieDetails.jsx
             |__ MovieDetails.css
-            |__ Reviews
-              |__ Reviews.jsx
-              |__ Reviews.css
       |__ MovieEdit
             |__ MovieEdit.jsx
             |__ MovieEdit.css
