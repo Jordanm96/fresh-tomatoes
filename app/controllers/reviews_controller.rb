@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_review, only: [:show, :update, :destroy]
 
+  # DO I NEED ALL THESE ROUTES HERE OR CAN I JUST DO THE INCLUDE: :IN MOVIES
   # GET /reviews
   def index
     @reviews = Review.all
@@ -23,6 +24,15 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
+  end
+
+  def add_review
+    @movie = Movie.find(params[:movie_id])
+    @review = Review.find(params[:id])
+
+    @movie.reviews.push(@review)
+
+    render json: @movie, include: :reviews
   end
 
   private

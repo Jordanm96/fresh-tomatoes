@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1
   def show
-    render json: @movie
+    render json: @movie, include: :reviews
   end
 
   # POST /movies
