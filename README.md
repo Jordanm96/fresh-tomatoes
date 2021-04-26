@@ -63,12 +63,6 @@
 - Deploy the fully functional front-end via Surge or Netlify.
 - Deploy the back-end via Heroku.
 
-### Procedural
-
-- Initialize a **git repo on Github**, with a link to my hosted project.
-- Have **frequent commits**, making a commit history at least every day. (75 commits minimum)
-- Use effective and safe **branching and merging** processes.
-
 <br>
 
 ### Goals
@@ -85,7 +79,6 @@
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -94,7 +87,6 @@
 | Axios | Used to access data from an API|
 | Ruby on Rails | Backend MVC framework|
 | Pry | Testing the Backend|
-
 | Bootstrap Library | Import premade styles for buttons and forms |
 
 <br>
@@ -103,37 +95,16 @@
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-
 [Desktop](https://xd.adobe.com/view/474406e6-dd09-4c5e-89a6-7177f040f47a-1217/)
+
 
 So I went to get another link but I have to upgrade. What should I do instead? Take screenshots and post to imgur or something like that?
 [Mobile](url)
 
-![Dummy Link](url)
+![Sign Up Landing Screen](https://user-images.githubusercontent.com/78659139/116120460-65d7f100-a674-11eb-9dc1-fb19ec7baa65.png)
 
-- Desktop Landing
+![Sign In Screen](https://user-images.githubusercontent.com/78659139/116120677-a7689c00-a674-11eb-8bf5-412115be49c5.png)
 
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
