@@ -1,4 +1,4 @@
-# README
+# Healthy Tomatoes
 
 - [Overview](#overview)
 - [MVP](#mvp)
