@@ -6,7 +6,7 @@ import './App.css';
 import Layout from './components/shared/Layout/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
-import { loginUser, registerUser } from './services/auth';
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import MainContainer from './containers/MainContainer';
 
 
@@ -16,7 +16,13 @@ function App() {
 
   const history = useHistory()
 
-  useEffect
+  useEffect(() => {
+    const handleverify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData)
+    }
+    handleverify()
+  }, [])
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
@@ -30,9 +36,15 @@ function App() {
     history.push('/movies')
   }
 
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem('authToken');
+    removeToken()
+  }
+
   return (
     <div className="App">
-      <Layout>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path= '/login'>
             <Login handleLogin={handleLogin} />

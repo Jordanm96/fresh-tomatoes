@@ -3,9 +3,11 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 const Layout = (props) => {
+  const { currentUser, handleLogout} = props;
+
   return (
     <div className="layout">
-      <Header />
+      <Header currentUser={currentUser} handleLogout={handleLogout}/>
       <div className="layout-children">{props.children}</div>
       <Footer />
     </div>
