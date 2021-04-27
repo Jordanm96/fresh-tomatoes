@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_movie, only: [:show, :update, :destroy]
 
   # GET /movies
@@ -10,13 +11,16 @@ class MoviesController < ApplicationController
 
   # GET /movies/1
   def show
-    render json: @movie
+    @review = Review.find(params[:id])
+    @movie.reviews.push(@review)
+
+    render json: @movie, include: :reviews
   end
 
   # POST /movies
   def create
     @movie = Movie.new(movie_params)
-
+    @movie.user = @current_user
     if @movie.save
       render json: @movie, status: :created
     else
@@ -33,11 +37,6 @@ class MoviesController < ApplicationController
     end
   end
 
-  # DELETE /movies/1
-  def destroy
-    @movie.destroy
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
@@ -46,6 +45,6 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:title, :director, :info, :user_id)
+      params.require(:movie).permit(:title, :director, :info, :image_url, :user_id)
     end
 end
