@@ -5,15 +5,11 @@ class MoviesController < ApplicationController
   # GET /movies
   def index
     @movies = Movie.all
-
     render json: @movies
   end
 
   # GET /movies/1
   def show
-    @review = Review.find(params[:id])
-    @movie.reviews.push(@review)
-
     render json: @movie, include: :reviews
   end
 

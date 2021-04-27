@@ -7,8 +7,6 @@ export const getAllMovies = async () => {
 
 // This api call is going to get a specific movie along with all of it's reviews
 export const getMovie = async (id) => {
-  // WHICH ONE
-  // const resp = await api.get(`/movies/${movieId}/reviews/${reviewId}`);
   const resp = await api.get(`/movies/${id}`);
   return resp.data;
 }
@@ -22,8 +20,3 @@ export const putMovie = async (id, movieData) => {
   const resp = await api.put(`/movies/${id}/`, { movie: movieData } );
   return resp.data;
 }
-
-// export const deleteMovie = async (id) => {
-//   const resp = await api.delete(`/movies/${id}`);
-//   return resp;
-// }

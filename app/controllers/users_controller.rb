@@ -18,9 +18,6 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:username, :email, :password)
-      # TO ADD PASSWORD CONFIRM
-      # params.require(:user).permit(:username, :email, :password, :password_confirmation)
-
+      params.require(:user).permit(:username, :email, :password, :password_confirmation)
     end
 end
