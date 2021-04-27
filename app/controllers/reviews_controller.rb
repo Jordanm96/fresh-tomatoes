@@ -1,14 +1,7 @@
 class ReviewsController < ApplicationController
-  before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_review, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :destroy]
+  before_action :set_review, only: :destroy
 
-  # DO I NEED ALL THESE ROUTES HERE OR CAN I JUST DO THE INCLUDE: :IN MOVIES
-  # GET /reviews
-  def index
-    @reviews = Review.all
-
-    render json: @reviews
-  end
 
   # POST /reviews
   def create
@@ -26,14 +19,6 @@ class ReviewsController < ApplicationController
     @review.destroy
   end
 
-  def add_review
-    @movie = Movie.find(params[:movie_id])
-    @review = Review.find(params[:id])
-
-    @movie.reviews.push(@review)
-
-    render json: @movie, include: :reviews
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

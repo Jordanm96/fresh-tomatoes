@@ -11,6 +11,9 @@ class MoviesController < ApplicationController
 
   # GET /movies/1
   def show
+    @review = Review.find(params[:id])
+    @movie.reviews.push(@review)
+
     render json: @movie, include: :reviews
   end
 
@@ -32,11 +35,6 @@ class MoviesController < ApplicationController
     else
       render json: @movie.errors, status: :unprocessable_entity
     end
-  end
-
-  # DELETE /movies/1
-  def destroy
-    @movie.destroy
   end
 
   private
