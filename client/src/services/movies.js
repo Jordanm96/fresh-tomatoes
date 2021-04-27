@@ -8,9 +8,8 @@ export const getAllMovies = async () => {
 // This api call is going to get a specific movie along with all of it's reviews
 export const getMovie = async (id) => {
   // WHICH ONE
-  const resp = await api.get(`/movies/${id}/reviews/${id}`);
+  // const resp = await api.get(`/movies/${movieId}/reviews/${reviewId}`);
   const resp = await api.get(`/movies/${id}`);
-  
   return resp.data;
 }
 
