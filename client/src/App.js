@@ -1,20 +1,33 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import { useState } from 'react';
+
+ import { useState, useEffect} from 'react';
+ import { Switch, Route, useHistory } from 'react-router-dom';
 
 import Layout from './components/shared/Layout/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
-import { loginUser } from './services/auth';
+import { loginUser, registerUser } from './services/auth';
+import MainContainer from './containers/MainContainer';
 
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
+  const history = useHistory()
+
+  useEffect
+
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
+    history.push('/movies')
+  }
+
+  const handleRegister = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(userData);
+    history.push('/movies')
   }
 
   return (
@@ -24,24 +37,15 @@ function App() {
           <Route path= '/login'>
             <Login handleLogin={handleLogin} />
           </Route>
+
           <Route path= '/register'>
-            <Register />
+            <Register handleRegister={handleRegister}/>
           </Route>
-          <Route path= '/movies'>
-          
-          </Route> 
-          <Route path= '/movies/:id'>
-          
+
+          <Route path='/'>
+            <MainContainer />
           </Route>
-          <Route path= '/movies/create'>
-          
-          </Route>
-          <Route path='/movies/:id/edit'>
-          
-          </Route>
-          <Route path= '/movies/:id/review'>
-          
-          </Route>
+
           
         </Switch>
       </Layout>
