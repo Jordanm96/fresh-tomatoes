@@ -5,6 +5,7 @@ import Nav from "../../components/Nav/Nav";
 const MoviesAll = (props) => {
   const { movies } = props;
   // I might have to define my sorting method in here then pass it to nav
+
   return (
     <div>
       <Nav />
@@ -13,8 +14,15 @@ const MoviesAll = (props) => {
         <div className="movie-card">
           <Link to={`/movies/${movie.id}`}>
             <img src={movie.image_url} alt={movie.title} />
-            <p key={movie.id}>{movie.title}</p>
           </Link>
+            <p key={movie.id}>{movie.title}</p>
+          {/* Insert my tomato symbol here */}
+          {/* Maybe wrap the whole div in a link tag? */}
+          {
+            movie.rating === 0 ?
+              <p>No reviews added</p> :
+              <p>{movie.rating}%</p>
+            }
         </div>
       ))}
     </div>

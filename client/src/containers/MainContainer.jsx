@@ -17,8 +17,6 @@ import ReviewCreate from "../screens/ReviewCreate/ReviewCreate";
 
 const MainContainer = () => {
   const [movies, setMovies] = useState([]);
-  const [reviews, setReviews] = useState([]);
-  const { id } = useParams();
   const history = useHistory();
 
   useEffect(() => {
@@ -32,8 +30,7 @@ const MainContainer = () => {
   const handleCreateMovie = async (formData) => {
     const movieData = await postMovie(formData);
     setMovies((prevState) => [...prevState, movieData]);
-    // I want it to push the user to the movie they just created
-    history.push('/movies');
+    history.push(`/movies/${movieData.id}`);
   };
 
   const handleEdit = async (id, formData) => {
@@ -43,24 +40,22 @@ const MainContainer = () => {
         return movie.id === Number(id) ? movieData : movie;
       })
     );
-        // I want it to push the user to the movie they just edited
-    history.push('/movies');
+    history.push(`/movies/${id}`);
   };
 
   const handleCreateReview = async (movie_id, formData) => {
-    const reviewData = await postReviewToMovie(movie_id, formData)
-    setReviews((prevState) => [...prevState, reviewData]);
-    history.push('/movies');
+    await postReviewToMovie(movie_id, formData)
+    history.push(`/movies/${movie_id}`);
   }
 
   return (
     <Switch>
-      <Route path="/movies/:id/reviews">
-        <ReviewCreate handleCreateReview={handleCreateReview}/>
-      </Route>
-
       <Route path="/movies/create">
         <MovieCreate handleCreateMovie={handleCreateMovie} />
+      </Route>
+      
+      <Route path="/movies/:id/reviews">
+        <ReviewCreate handleCreateReview={handleCreateReview}/>
       </Route>
 
       <Route path="/movies/:id/edit">

@@ -3,12 +3,10 @@ import { useParams, Link } from "react-router-dom";
 import Reviews from "../../components/Reviews/Reviews";
 import { getMovie } from "../../services/movies";
 
-const MovieInfo = (props) => {
-  // const { movieInfo } = props;
-  const { id } = useParams();
-  // console.log(movieInfo)
+const MovieInfo = () => {
   const [movieInfo, setMovieInfo] = useState(null);
-
+  const { id } = useParams();
+  
   useEffect(() => {
     const fetchMovie = async () => {
       const movieData = await getMovie(id);
@@ -16,19 +14,24 @@ const MovieInfo = (props) => {
     };
     fetchMovie();
   }, [id]);
-  console.log(movieInfo);
-
+  
   if (!movieInfo) {
     return <h1>Loading....</h1>;
   }
-
+  const { title, director, info, rating, image_url } = movieInfo
+  
   return (
     <div>
       <div key={movieInfo.id}>
-        <p>{movieInfo.title}</p>
-        <p>Director: {movieInfo.director}</p>
-        <p>{movieInfo.info}</p>
-        <img src={movieInfo.image_url} alt={movieInfo.title} />
+        <p>{title}</p>
+        <p>Director: {director}</p>
+        <p>{info}</p>
+        {
+            rating === 0 ?
+              <p>No ratings yet</p> :
+              <p>Audience Score: {rating}%</p>
+            }
+        <img src={image_url} alt={title} />
         <Link to={`/movies/${movieInfo.id}/edit`}>
           <button>EDIT MOVIE</button>
         </Link>
