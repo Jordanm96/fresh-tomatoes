@@ -1,18 +1,20 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Nav from "../../components/Nav/Nav";
 
 const MoviesAll = (props) => {
   const { movies } = props;
-
+  // I might have to define my sorting method in here then pass it to nav
   return (
     <div>
-      {/* Insert add movie button and my sort by filter  */}
+      {/* Insert add movie button and my sort by filter  COMPONENT*/}
+      <Nav />
       <h3>FIND A MOVIE</h3>
       {movies.map((movie) => (
-        <div className='movie-card'>
+        <div className="movie-card">
           <Link to={`/movies/${movie.id}`}>
-          <img src={movie.image_url}/>
-          <p key={movie.id}>{movie.title}</p>
+            <img src={movie.image_url} />
+            <p key={movie.id}>{movie.title}</p>
           </Link>
         </div>
       ))}

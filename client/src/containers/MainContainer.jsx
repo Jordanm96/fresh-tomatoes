@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useParams } from "react-router-dom";
-import MoviesAll from "../screens/MoviesAll/MoviesAll";
-import MovieInfo from "../screens/MovieInfo/MovieInfo";
 
 import { getAllMovies, getMovie } from "../services/movies";
+
+import MoviesAll from "../screens/MoviesAll/MoviesAll";
+import MovieInfo from "../screens/MovieInfo/MovieInfo";
+import MovieCreate from "../screens/MovieCreate/MovieCreate";
 
 const MainContainer = () => {
   const [movies, setMovies] = useState([]);
   const [movieInfo, setMovieInfo] = useState(null);
+  // const [reviews, setReviews] = useState([]);
   const { id } = useParams();
 
-  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -40,6 +42,10 @@ const MainContainer = () => {
           <Route path= '/movies/:id/review'>
           
         </Route> */}
+      <Route path= '/movies/create'>
+        <MovieCreate />
+      </Route>
+
       <Route path='/movies/:id'>
         <MovieInfo movieInfo={movieInfo}/>
       </Route>
