@@ -1,8 +1,15 @@
+/* * {
+  border: 2px solid red;
+} */
 .App {
   text-align: center;
 }
+body {
+  background: #EEEEEE;
+}
 
-.App-logo {
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +42,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

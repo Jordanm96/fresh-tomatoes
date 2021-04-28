@@ -2,11 +2,13 @@ class ReviewsController < ApplicationController
   before_action :authorize_request, only: [:create, :destroy]
   before_action :set_review, only: :destroy
 
-
   # POST /reviews
   def create
+    @movie = Movie.find(params[:movie_id])
     @review = Review.new(review_params)
     @review.user = @current_user
+    @review.movie = @movie
+
     if @review.save
       render json: @review, status: :created
     else
@@ -17,6 +19,7 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
+    render json: @review.movie, include: :reviews
   end
 
 
@@ -28,6 +31,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:content, :rating, :user_id, :movie_id)
+      params.require(:review).permit(:content, :rating)
     end
 end
