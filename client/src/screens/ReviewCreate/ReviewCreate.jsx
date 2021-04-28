@@ -52,7 +52,7 @@ const ReviewCreate = (props) => {
         </label>
         <label>Rating:
           <select name='rating' value={rating} onChange={handleChange}>
-            <option selected='selected'>Select</option>
+            <option defaultValue>-- Select --</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>

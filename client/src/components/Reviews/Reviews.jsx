@@ -15,7 +15,7 @@ const Reviews = (props) => {
         <button>ADD REVIEW</button>
       </Link>
       {reviews.map((review) => (
-        <div>
+        <div key={review.id}>
           <p>"{review.content}"</p>
           <p>Rating: {review.rating}/5</p>
           <p>-{user.username}</p>

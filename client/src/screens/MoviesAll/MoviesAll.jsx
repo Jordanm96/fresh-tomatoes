@@ -11,11 +11,11 @@ const MoviesAll = (props) => {
       <Nav />
       <h3>FIND A MOVIE</h3>
       {movies.map((movie) => (
-        <div className="movie-card">
+        <div key={movie.id} className="movie-card">
           <Link to={`/movies/${movie.id}`}>
             <img src={movie.image_url} alt={movie.title} />
           </Link>
-            <p key={movie.id}>{movie.title}</p>
+            <p>{movie.title}</p>
           {/* Insert my tomato symbol here */}
           {/* Maybe wrap the whole div in a link tag? */}
           {
