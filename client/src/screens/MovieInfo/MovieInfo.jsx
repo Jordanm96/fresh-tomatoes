@@ -14,7 +14,7 @@ const MovieInfo = (props) => {
       setMovieInfo(movieData);
     }
     fetchMovie();
-  }, [])
+  }, [id])
   console.log(movieInfo)
 
   if (!movieInfo) {
@@ -22,11 +22,11 @@ const MovieInfo = (props) => {
   }
 
   return (
-    <div>
+    <div key={movieInfo.id}>
       <p>{movieInfo.title}</p>
       <p>Director: {movieInfo.director}</p>
       <p>{movieInfo.info}</p>
-      <img src={movieInfo.image_url} />
+      <img src={movieInfo.image_url} alt={movieInfo.title}/>
     </div>
   );
 };

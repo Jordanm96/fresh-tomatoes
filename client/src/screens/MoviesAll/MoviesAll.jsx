@@ -12,7 +12,7 @@ const MoviesAll = (props) => {
       {movies.map((movie) => (
         <div className="movie-card">
           <Link to={`/movies/${movie.id}`}>
-            <img src={movie.image_url} />
+            <img src={movie.image_url} alt={movie.title} />
             <p key={movie.id}>{movie.title}</p>
           </Link>
         </div>

@@ -1,7 +1,7 @@
 import './App.css';
 
- import { useState, useEffect} from 'react';
- import { Switch, Route, useHistory } from 'react-router-dom';
+import { useState, useEffect} from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
 
 import Layout from './components/shared/Layout/Layout';
 import Login from './screens/Login/Login';
