@@ -11,7 +11,7 @@ const Header = (props) => {
         <>
           <Link to="/movies">Movies</Link>
           <p>Hi, {currentUser.username}</p>
-          <button onClick={handleLogout}>Log Out</button>
+          <button onClick={handleLogout}>LOG OUT</button>
         </>
       ) : (
         <>
