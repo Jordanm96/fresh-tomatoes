@@ -16,8 +16,8 @@ const MainContainer = () => {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const movieData = await getAllMovies();
-      setMovies(movieData);
+      const allMovies = await getAllMovies();
+      setMovies(allMovies);
     };
     fetchMovies();
   }, []);
@@ -28,7 +28,7 @@ const MainContainer = () => {
       setMovieInfo(movieData);
     }
     fetchMovie();
-  }, [id])
+  }, [])
 
   return (
     <Switch>
