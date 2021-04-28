@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getMovie } from '../../services/movies';
 
 const MovieInfo = (props) => {
@@ -8,6 +8,7 @@ const MovieInfo = (props) => {
   const { id } = useParams();
   // console.log(movieInfo)
   const [movieInfo, setMovieInfo] = useState(null)
+  
   useEffect(() => {
     const fetchMovie = async () => {
       const movieData = await getMovie(id);
@@ -26,7 +27,10 @@ const MovieInfo = (props) => {
       <p>{movieInfo.title}</p>
       <p>Director: {movieInfo.director}</p>
       <p>{movieInfo.info}</p>
-      <img src={movieInfo.image_url} alt={movieInfo.title}/>
+      <img src={movieInfo.image_url} alt={movieInfo.title} />
+      <Link to={`/movies/${movieInfo.id}/edit`}>
+      <button>EDIT MOVIE</button>
+      </Link>
     </div>
   );
 };
