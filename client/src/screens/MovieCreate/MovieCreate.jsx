@@ -8,7 +8,7 @@ const MovieCreate = (props) => {
     image_url: "",
   });
   const { title, director, info, image_url } = formData;
-  const { handleCreate } = props;
+  const { handleCreateMovie } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +22,7 @@ const MovieCreate = (props) => {
       <h3>ADD A MOVIE</h3>
       <form onSubmit={(e) => {
         e.preventDefault();
-        handleCreate(formData);
+        handleCreateMovie(formData);
       }}>
         <label>
           Title:

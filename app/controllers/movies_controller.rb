@@ -6,6 +6,7 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     render json: @movies
+    # Might need to add include: :reviews in order to display the review percentage on MoviesAll screen
   end
 
   # GET /movies/1

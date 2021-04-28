@@ -11,7 +11,7 @@ const Reviews = (props) => {
   return (
     <div className="reviews-container">
       <h3>REVIEWS FOR {title}</h3>
-      <Link>
+      <Link to={`/movies/${movieInfo.id}/reviews`}>
         <button>ADD REVIEW</button>
       </Link>
       {reviews.map((review) => (
@@ -19,8 +19,6 @@ const Reviews = (props) => {
           <p>"{review.content}"</p>
           <p>Rating: {review.rating}/5</p>
           <p>-{user.username}</p>
-          {/* Here I want to have the name of the user who created the id
-            Do I have to add the user name to the my reviews table? */}
         </div>
       ))}
     </div>
