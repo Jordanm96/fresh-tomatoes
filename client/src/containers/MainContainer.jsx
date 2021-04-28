@@ -55,7 +55,7 @@ const MainContainer = () => {
 
       {/* 
           <Route path= '/movies/:id/review'>
-          
+          this will be my review create route
         </Route> */}
       <Route path= '/movies/create'>
         <MovieCreate handleCreate={handleCreate}/>
