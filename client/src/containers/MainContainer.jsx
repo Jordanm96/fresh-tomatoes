@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Switch, Route, useParams, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 
 import {
   getAllMovies,
@@ -11,7 +11,7 @@ import MoviesAll from "../screens/MoviesAll/MoviesAll";
 import MovieInfo from "../screens/MovieInfo/MovieInfo";
 import MovieCreate from "../screens/MovieCreate/MovieCreate";
 import MovieEdit from "../screens/MovieEdit/MovieEdit";
-import { deleteReview, postReviewToMovie } from "../services/reviews";
+import { postReviewToMovie } from "../services/reviews";
 import ReviewCreate from "../screens/ReviewCreate/ReviewCreate";
 
 const MainContainer = (props) => {

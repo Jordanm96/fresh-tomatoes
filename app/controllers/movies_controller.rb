@@ -15,8 +15,6 @@ class MoviesController < ApplicationController
     # render json: @movie, include: [:reviews, :user, :rating]
     # as_json allows us to include methods
     render json: @movie.as_json(include: [{reviews: {include: :user}}, :user], methods: :rating)
-
-    # render json: @movie.as_json(include: [{reviews: {include: :user}}, :user], methods: :rating)
   end
 
   # POST /movies
