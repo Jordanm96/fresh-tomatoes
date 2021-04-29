@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
 import "./MoviesAll.css";
@@ -6,11 +6,13 @@ import "./MoviesAll.css";
 const MoviesAll = (props) => {
   const { movies } = props;
   const { currentUser } = props;
-  // I might have to define my sorting method in here then pass it to nav
+  const { handleSort } = props;
+  const { handleSubmit } = props;
+
 
   return (
     <div>
-      <Nav movies={movies} currentUser={currentUser}/>
+      <Nav movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit}/>
       <h3>FIND A MOVIE</h3>
       <div className="movies-container">
         {movies.map((movie) => (

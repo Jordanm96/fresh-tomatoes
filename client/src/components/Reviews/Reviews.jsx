@@ -8,9 +8,9 @@ const Reviews = (props) => {
   const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
 
-  if (!currentUser) {
-    return <h1>Loading...</h1> 
-  }
+  // if (!currentUser) {
+  //   return <h1>Loading...</h1> 
+  // }
 
   return (
     <div className="reviews-container">
@@ -22,6 +22,7 @@ const Reviews = (props) => {
         <div key={review.id} className="review-card">
           <p>"{review.content}"</p>
           <p>Rating: {review.rating}/5</p>
+          {/* I am getitng undefined after I delete a review because it is trying to find the review I just deleted I think */}
           <p>- {review.user.username}</p>
 
           {currentUser.username === review?.user.username ? (

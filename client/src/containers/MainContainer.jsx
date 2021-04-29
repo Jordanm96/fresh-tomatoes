@@ -13,9 +13,14 @@ import MovieCreate from "../screens/MovieCreate/MovieCreate";
 import MovieEdit from "../screens/MovieEdit/MovieEdit";
 import { postReviewToMovie } from "../services/reviews";
 import ReviewCreate from "../screens/ReviewCreate/ReviewCreate";
+import { AZ, ZA } from "../utils/sort";
 
 const MainContainer = (props) => {
   const [movies, setMovies] = useState([]);
+  const [queriedMovies, setQueriedMovies] = useState([])
+  const [sortType, setSortType] = useState([])
+
+
   const { currentUser } = props;
   const history = useHistory();
 
@@ -23,9 +28,32 @@ const MainContainer = (props) => {
     const fetchMovies = async () => {
       const allMovies = await getAllMovies();
       setMovies(allMovies);
+      setQueriedMovies(allMovies);
     };
     fetchMovies();
   }, []);
+
+  const handleSort = type => {
+    setSortType(type)
+    switch (type) {
+      case "name-ascending":
+        setQueriedMovies(AZ(queriedMovies))
+        break
+      case "name-descending":
+        setQueriedMovies(ZA(queriedMovies))
+        break
+      // case "price-ascending":
+      //   setQueriedProducts(lowestFirst(queriedProducts))
+      //   break
+      // case "price-descending":
+      //   setQueriedProducts(highestFirst(queriedProducts))
+      //   break
+      default:
+        break
+    }
+  }
+  const handleSubmit = event => event.preventDefault()
+
 
   const handleCreateMovie = async (formData) => {
     const movieData = await postMovie(formData);
@@ -67,7 +95,7 @@ const MainContainer = (props) => {
       </Route>
 
       <Route path="/movies">
-        <MoviesAll movies={movies} currentUser={currentUser} />
+        <MoviesAll movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit} />
       </Route>
     </Switch>
   );
