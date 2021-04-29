@@ -63,7 +63,7 @@ const MainContainer = (props) => {
       </Route>
 
       <Route path="/movies/:id">
-        <MovieInfo movies={movies} setMovies={setMovies}/>
+        <MovieInfo currentUser={currentUser} movies={movies} setMovies={setMovies}/>
       </Route>
 
       <Route path="/movies">

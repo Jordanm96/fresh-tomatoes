@@ -4,17 +4,14 @@ const Reviews = (props) => {
   const { movieInfo } = props;
   const { handleDelete } = props;
   const { movies } = props;
+  const { currentUser } = props;
 
-  const history = useHistory();
   const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
   const user = movieInfo.user;
 
-  // const deleteReview = () => {
-  //   handleDelete(review.id);
-  //   window.location.reload()
-  // }
-
+  // console.log(currentUser.username)
+  // console.log(user.username)
   return (
     <div className="reviews-container">
       <h3>REVIEWS FOR {title}</h3>
@@ -22,14 +19,15 @@ const Reviews = (props) => {
         <button>ADD REVIEW</button>
       </Link>
       {reviews.map((review) => (
-        <div key={review.id} className='review-card'>
+        <div key={review.id} className="review-card">
           <p>"{review.content}"</p>
           <p>Rating: {review.rating}/5</p>
-          <p>-{user.username}</p>
+          <p>- {user.username}</p>
 
-
+          {/* {currentUser.username === user.username ? (
+            <button onClick={() => handleDelete(review.id)}>DELETE</button>
+          ) : null} */}
           <button onClick={() => handleDelete(review.id)}>DELETE</button>
-          
         </div>
       ))}
     </div>
