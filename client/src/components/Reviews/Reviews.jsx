@@ -20,11 +20,12 @@ const Reviews = (props) => {
       </Link>
       {reviews.map((review) => (
         <div key={review.id} className="review-card">
-          <p>"{review.content}"</p>
-          <p>Rating: {review.rating}/5</p>
+          <p>"{review?.content}"</p>
+          <p>Rating: {review?.rating}/5</p>
           {/* I am getitng undefined after I delete a review because it is trying to find the review I just deleted I think */}
-          <p>- {review.user.username}</p>
-
+          <p>- {review?.user.username}</p>
+          {console.log(review.user.username)}
+          
           {currentUser.username === review?.user.username ? (
             <button onClick={() => handleDelete(review.id)}>DELETE</button>
           ) : null}
