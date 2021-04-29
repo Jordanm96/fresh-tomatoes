@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
-    render json: @review.movie, include: :reviews
+    render json: @review.movie.as_json(include: [:reviews, :user], methods: :rating)
   end
 
 

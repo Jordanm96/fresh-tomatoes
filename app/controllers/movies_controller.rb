@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
   # GET /movies/1
   def show
     # render json: @movie, include: [:reviews, :user, :rating]
+    # as_json allows us to use methods:
     render json: @movie.as_json(include: [:reviews, :user], methods: :rating)
   end
 

@@ -9,7 +9,7 @@ const MoviesAll = (props) => {
 
   return (
     <div>
-      <Nav />
+      <Nav movies={movies}/>
       <h3>FIND A MOVIE</h3>
       <div className="movies-container">
         {movies.map((movie) => (
@@ -18,15 +18,14 @@ const MoviesAll = (props) => {
               <img src={movie.image_url} alt={movie.title} />
               {/* Insert my tomato symbol here */}
               {/* Maybe wrap the whole div in a link tag? */}
-              <div className='words'>
-
-              {movie.rating === 0 ? (
-                <p>No reviews added</p>
+              <div className="words">
+                {movie.rating === 0 ? (
+                  <p>No reviews added</p>
                 ) : (
                   <p>{movie.rating}%</p>
-                  )}
-              <p>{movie.title}</p>
-             </div>
+                )}
+                <p>{movie.title}</p>
+              </div>
             </div>
           </Link>
         ))}

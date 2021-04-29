@@ -2,11 +2,20 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Reviews from "../../components/Reviews/Reviews";
 import { getMovie } from "../../services/movies";
+import { deleteReview } from "../../services/reviews";
 
-const MovieInfo = () => {
+const MovieInfo = (props) => {
   const [movieInfo, setMovieInfo] = useState(null);
   const { id } = useParams();
+  const { movies, setMovies } = props;
   
+  const handleDelete = async (id) => {
+    const movieDetails = await deleteReview(id)
+    // debugger
+    setMovieInfo(movieDetails)
+
+  }
+
   useEffect(() => {
     const fetchMovie = async () => {
       const movieData = await getMovie(id);
@@ -19,7 +28,7 @@ const MovieInfo = () => {
     return <h1>Loading....</h1>;
   }
   const { title, director, info, rating, image_url } = movieInfo
-  
+
   return (
     <div>
       <div key={movieInfo.id}>
@@ -37,7 +46,7 @@ const MovieInfo = () => {
         </Link>
       </div>
       <div>
-        <Reviews movieInfo={movieInfo}/>
+        <Reviews movies={movies} movieInfo={movieInfo} handleDelete={handleDelete}/>
       </div>
     </div>
   );

@@ -7,5 +7,5 @@ export const postReviewToMovie = async (movieId, reviewData) => {
 
 export const deleteReview = async (id) => {
   const resp = await api.delete(`/reviews/${id}`);
-  return resp;
+  return resp.data;
 }

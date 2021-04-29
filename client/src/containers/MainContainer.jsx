@@ -12,11 +12,12 @@ import MoviesAll from "../screens/MoviesAll/MoviesAll";
 import MovieInfo from "../screens/MovieInfo/MovieInfo";
 import MovieCreate from "../screens/MovieCreate/MovieCreate";
 import MovieEdit from "../screens/MovieEdit/MovieEdit";
-import { postReviewToMovie } from "../services/reviews";
+import { deleteReview, postReviewToMovie } from "../services/reviews";
 import ReviewCreate from "../screens/ReviewCreate/ReviewCreate";
 
 const MainContainer = () => {
   const [movies, setMovies] = useState([]);
+
   const history = useHistory();
 
   useEffect(() => {
@@ -43,10 +44,15 @@ const MainContainer = () => {
     history.push(`/movies/${id}`);
   };
 
-  const handleCreateReview = async (movie_id, formData) => {
-    await postReviewToMovie(movie_id, formData)
-    history.push(`/movies/${movie_id}`);
+  const handleCreateReview = async (id, formData) => {
+    await postReviewToMovie(id, formData)
+    history.push(`/movies/${id}`);
   }
+  
+  // const handleDelete = async (id) => {
+  //   await deleteReview(id);
+  //   setMovies(prevState => prevState.filter(review => review.id !== id))
+  // }
 
   return (
     <Switch>
@@ -63,7 +69,7 @@ const MainContainer = () => {
       </Route>
 
       <Route path="/movies/:id">
-        <MovieInfo />
+        <MovieInfo movies={movies} setMovies={setMovies}/>
       </Route>
 
       <Route path="/movies">

@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Reviews = (props) => {
   const { movieInfo } = props;
+  const { handleDelete } = props;
+  const { movies } = props;
+
+  const history = useHistory();
   const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
   const user = movieInfo.user;
-  // console.log(movieInfo)
-  // console.log(reviews)
+
+  // const deleteReview = () => {
+  //   handleDelete(review.id);
+  //   window.location.reload()
+  // }
 
   return (
     <div className="reviews-container">
@@ -15,10 +22,14 @@ const Reviews = (props) => {
         <button>ADD REVIEW</button>
       </Link>
       {reviews.map((review) => (
-        <div key={review.id}>
+        <div key={review.id} className='review-card'>
           <p>"{review.content}"</p>
           <p>Rating: {review.rating}/5</p>
           <p>-{user.username}</p>
+
+
+          <button onClick={() => handleDelete(review.id)}>DELETE</button>
+          {/* <button onClick={() => handleDelete(review.id)}>DELETE</button> */}
         </div>
       ))}
     </div>
