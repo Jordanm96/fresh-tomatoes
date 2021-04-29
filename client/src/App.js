@@ -57,7 +57,7 @@ function App() {
           </Route>
 
           <Route path='/'>
-            <MainContainer />
+            <MainContainer currentUser={currentUser}/>
           </Route>
 
         

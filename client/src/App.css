@@ -3,11 +3,14 @@
 } */
 .App {
   text-align: center;
+
 }
 body {
   background: #EEEEEE;
 }
-
+a {
+  text-decoration: none;
+}
 
 /* .App-logo {
   height: 40vmin;

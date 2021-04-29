@@ -3,7 +3,6 @@ import { Switch, Route, useParams, useHistory } from "react-router-dom";
 
 import {
   getAllMovies,
-  getMovie,
   postMovie,
   putMovie,
 } from "../services/movies";
@@ -12,11 +11,12 @@ import MoviesAll from "../screens/MoviesAll/MoviesAll";
 import MovieInfo from "../screens/MovieInfo/MovieInfo";
 import MovieCreate from "../screens/MovieCreate/MovieCreate";
 import MovieEdit from "../screens/MovieEdit/MovieEdit";
-import { postReviewToMovie } from "../services/reviews";
+import { deleteReview, postReviewToMovie } from "../services/reviews";
 import ReviewCreate from "../screens/ReviewCreate/ReviewCreate";
 
-const MainContainer = () => {
+const MainContainer = (props) => {
   const [movies, setMovies] = useState([]);
+  const { currentUser } = props;
   const history = useHistory();
 
   useEffect(() => {
@@ -43,11 +43,11 @@ const MainContainer = () => {
     history.push(`/movies/${id}`);
   };
 
-  const handleCreateReview = async (movie_id, formData) => {
-    await postReviewToMovie(movie_id, formData)
-    history.push(`/movies/${movie_id}`);
+  const handleCreateReview = async (id, formData) => {
+    await postReviewToMovie(id, formData)
+    history.push(`/movies/${id}`);
   }
-
+  
   return (
     <Switch>
       <Route path="/movies/create">
@@ -55,7 +55,7 @@ const MainContainer = () => {
       </Route>
       
       <Route path="/movies/:id/reviews">
-        <ReviewCreate handleCreateReview={handleCreateReview}/>
+        <ReviewCreate currentUser={currentUser} handleCreateReview={handleCreateReview}/>
       </Route>
 
       <Route path="/movies/:id/edit">
@@ -63,11 +63,11 @@ const MainContainer = () => {
       </Route>
 
       <Route path="/movies/:id">
-        <MovieInfo />
+        <MovieInfo currentUser={currentUser} movies={movies} setMovies={setMovies}/>
       </Route>
 
       <Route path="/movies">
-        <MoviesAll movies={movies} />
+        <MoviesAll movies={movies} currentUser={currentUser} />
       </Route>
     </Switch>
   );

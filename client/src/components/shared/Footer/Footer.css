@@ -1,15 +1,8 @@
-.footer {
-  margin: 0 auto;
+footer {
+  background: rgb(42, 44, 50, .9);
+  color: white;
+  height:40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  width:100%;
-  color: white;
-  height:30px;
-  /* background:#2A2C32; added opacity */ 
-  background: rgb(42, 44, 50, .9);
 }
