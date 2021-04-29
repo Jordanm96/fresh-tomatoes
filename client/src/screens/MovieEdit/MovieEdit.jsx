@@ -26,7 +26,8 @@ const MovieEdit = (props) => {
     if (movies.length) {
       prefillFormData();
     }
-  }, [movies]);
+  }, [movies, id]);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
