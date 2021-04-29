@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Header.css';
 
 const Header = (props) => {
   const { currentUser, handleLogout} = props;
 
   return (
     <header>
+      <Link to="/movies">
       <h1>Fresh Tomatoes</h1>
+      </Link>
       {currentUser ? (
         <>
           <Link to="/movies">Movies</Link>

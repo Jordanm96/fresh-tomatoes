@@ -3,9 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className = 'footer'>
-        © Jordan Montero
-    </div>
+    <footer>© Jordan Montero</footer>
   );
 };
 

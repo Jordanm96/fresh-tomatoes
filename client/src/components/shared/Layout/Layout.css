@@ -1,0 +1,9 @@
+.layout {
+  width: 80%;
+  margin: 0 auto;
+}
+.layout-children {
+  background-color: #FFFFFF;
+  height: 100%;
+  margin-bottom: 0;
+}
