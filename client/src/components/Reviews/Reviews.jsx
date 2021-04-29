@@ -29,7 +29,7 @@ const Reviews = (props) => {
 
 
           <button onClick={() => handleDelete(review.id)}>DELETE</button>
-          {/* <button onClick={() => handleDelete(review.id)}>DELETE</button> */}
+          
         </div>
       ))}
     </div>
