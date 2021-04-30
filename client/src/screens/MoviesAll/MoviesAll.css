@@ -8,6 +8,8 @@
 .movie-card {
   position: relative;
   margin: 20px 20px;
+  height: fit-content;
+  width: fit-content;
 }
 .movie-card img {
   border-radius: 5%;
@@ -17,6 +19,7 @@ img {
   height: 250px;
   border-radius: 5%;
 }
+
 #tomato {
   width: 20px;
   height: 20px;
@@ -29,12 +32,12 @@ img {
   padding: 0px;
   color: black;
   font-size: 16px;
-    height: 93px;
-    padding-top: 10px;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  height: 93px;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .movie-card :hover {

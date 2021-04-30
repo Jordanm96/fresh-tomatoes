@@ -10,7 +10,7 @@ const Layout = (props) => {
     <div className="layout">
       <Header currentUser={currentUser} handleLogout={handleLogout}/>
       <div className="layout-children">{props.children}</div>
-      <Footer />
+      <footer>© Jordan Montero</footer>
     </div>
   );
 };

@@ -26,7 +26,7 @@ const MoviesAll = (props) => {
                   <p>No reviews added</p>
                 ) : (
                     <>
-                  <img id='tomato'src='https://cdn.iconscout.com/icon/free/png-512/tomato-vegetable-emoj-symbol-food-30690.png' />
+                  <img id='tomato'src='https://cdn.iconscout.com/icon/free/png-512/tomato-vegetable-emoj-symbol-food-30690.png' alt='tomato'/>
                       <p>{movie.rating}%</p>
                       </>
                 )}
