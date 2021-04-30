@@ -31,7 +31,7 @@ const MovieInfo = (props) => {
   return (
     <div className='movie-info'>
       <div key={movieInfo.id}>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>Director: {director}</p>
         <p>{info}</p>
         {rating === 0 ? (

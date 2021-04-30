@@ -19,7 +19,9 @@ const MovieCreate = (props) => {
   };
   return (
     <>
+      <div className='heading'>
       <h3>ADD A MOVIE</h3>
+      </div>
       <form className='user-form' onSubmit={(e) => {
         e.preventDefault();
         handleCreateMovie(formData);

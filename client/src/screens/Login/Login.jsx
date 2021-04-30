@@ -20,7 +20,10 @@ const Login = (props) => {
 
   return (
     <>
+      <div className='heading'>
       <h3>LOG IN</h3>
+      </div>
+
       <form className='user-form' onSubmit= {(e) => {
         e.preventDefault();
         handleLogin(formData);

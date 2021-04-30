@@ -38,7 +38,10 @@ const MovieEdit = (props) => {
   };
   return (
     <>
-      <h3>EDIT MOVIE</h3>
+          <div className='heading'>
+
+        <h3>EDIT MOVIE</h3>
+        </div>
       <form className='user-form'
         onSubmit={(e) => {
           e.preventDefault();

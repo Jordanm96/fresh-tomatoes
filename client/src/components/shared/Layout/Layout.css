@@ -10,7 +10,14 @@
   /* This min-height made my white background longer so the footer would stay at the bottom */
   min-height: 85vh;
 }
-
+footer {
+  background: rgb(42, 44, 50, .9);
+  color: white;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 @media only screen and (max-width: 600px) {
   .layout-children {
     height: 100%;

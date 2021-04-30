@@ -21,7 +21,10 @@ const Register = (props) => {
 
   return (
     <>
+          <div className='heading'>
+
       <h3>REGISTER</h3>
+      </div>
       <form className='user-form' onSubmit= {(e) => {
         e.preventDefault();
         handleRegister(formData);

@@ -11,8 +11,11 @@ const MoviesAll = (props) => {
 
 
   return (
-    <div>
+    <>
+          <div className='heading'>
+
       <h3>FIND A MOVIE</h3>
+      </div>
       <Nav movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit}/>
       <div className="movies-container">
         {movies.map((movie) => (
@@ -39,7 +42,7 @@ const MoviesAll = (props) => {
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

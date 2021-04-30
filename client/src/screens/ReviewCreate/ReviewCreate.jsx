@@ -40,8 +40,11 @@ const ReviewCreate = (props) => {
   }
 
   return (
-    <div>
+    <>
+          <div className='heading'>
+
       <h3>RATE & REVIEW</h3>
+      </div>
       {/* Here I need to render the movie title and image */}
       <p>{movieInfo.title}</p>
       <img src={movieInfo.image_url} alt={movieInfo.title} />
@@ -81,7 +84,7 @@ const ReviewCreate = (props) => {
 
         <button>ADD</button>
       </form>
-    </div>
+    </>
   );
 };
 
