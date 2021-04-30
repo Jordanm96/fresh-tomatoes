@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { getMovie } from "../../services/movies";
+import StarRatings from 'react-star-ratings';
 
 const ReviewCreate = (props) => {
   const [formData, setFormData] = useState({
     content: '',
-    rating: ''
+    rating: 0
   });
   const [movieInfo, setMovieInfo] = useState(null);
   const { content, rating } = formData;
@@ -31,6 +32,13 @@ const ReviewCreate = (props) => {
     }));
   };
 
+  const handleRating = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      rating: e
+    }));
+  }
+
   return (
     <div>
       <h3>RATE & REVIEW</h3>
@@ -50,7 +58,7 @@ const ReviewCreate = (props) => {
             onChange={handleChange}
           />
         </label>
-        <label>Rating:
+        {/* <label>Rating:
           <select name='rating' value={rating} onChange={handleChange}>
             <option defaultValue>-- Select --</option>
             <option>1</option>
@@ -59,7 +67,18 @@ const ReviewCreate = (props) => {
             <option>4</option>
             <option>5</option>
             </select>
+        </label> */}
+
+        <label>Rating:
+        <StarRatings
+          rating={rating}
+          starRatedColor="yellow"
+          changeRating={handleRating}
+          numberOfStars={5}
+          name='rating'
+        />
         </label>
+
         <button>ADD</button>
       </form>
     </div>
