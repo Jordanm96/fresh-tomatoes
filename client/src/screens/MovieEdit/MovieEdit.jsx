@@ -37,51 +37,57 @@ const MovieEdit = (props) => {
     }));
   };
   return (
-    <div>
+    <>
       <h3>EDIT MOVIE</h3>
-      <form
+      <form className='user-form'
         onSubmit={(e) => {
           e.preventDefault();
           handleEdit(id, formData);
         }}
       >
-        <label>
+        <div className='inputs'>
+
+        <label className= 'login'>
           Title:
+          </label>
           <input
             type="text"
             name="title"
             value={title}
             onChange={handleChange}
-          />
-        </label>
+            className= 'login'
+            />
 
-        <label>
+        <label className= 'login'>
           Director:
+          </label>
           <input
             type="text"
             name="director"
             value={director}
             onChange={handleChange}
-          />
-        </label>
+            className= 'login'
+            />
 
-        <label>
+        <label className= 'login'>
           Plot Summary:
-          <input type="text" name="info" value={info} onChange={handleChange} />
         </label>
+          <input type="text" name="info" value={info} onChange={handleChange} className= 'login'/>
 
-        <label>
+        <label className= 'login'>
           Image URL:
+          </label>
           <input
             type="text"
             name="image_url"
             value={image_url}
             onChange={handleChange}
-          />
-        </label>
+            className= 'login'
+            />
         <button>SAVE CHANGES</button>
+            </div>
       </form>
-    </div>
+    </>
   );
 };
 

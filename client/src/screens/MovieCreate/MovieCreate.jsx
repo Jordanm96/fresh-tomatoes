@@ -18,54 +18,64 @@ const MovieCreate = (props) => {
     }));
   };
   return (
-    <div>
+    <>
       <h3>ADD A MOVIE</h3>
-      <form onSubmit={(e) => {
+      <form className='user-form' onSubmit={(e) => {
         e.preventDefault();
         handleCreateMovie(formData);
       }}>
-        <label>
+                <div className='inputs'>
+
+        <label className= 'login'>
           Title:
+          </label>
           <input
             type="text"
             name="title"
             value={title}
             onChange={handleChange}
+            className= 'login'
           />
-        </label>
 
-        <label>
+        <label className= 'login'>
           Director:
+          </label>
           <input
             type="text"
             name="director"
             value={director}
             onChange={handleChange}
+            className= 'login'
           />
-        </label>
 
-        <label>
+        <label className= 'login'>
           Plot Summary:
-          <input
+          </label>
+          <textarea
             type="text"
             name="info"
             value={info}
             onChange={handleChange}
+            className='textarea'
+            // className='login'
+            // rows={20}
           />
-        </label>
 
-        <label>
+        <label className= 'login'>
           Image URL:
+          </label>
           <input
             type="text"
             name="image_url"
             value={image_url}
             onChange={handleChange}
+            className= 'login'
           />
-        </label>
         <button>CREATE</button>
+        </div>
+
       </form>
-    </div>
+    </>
   );
 };
 
