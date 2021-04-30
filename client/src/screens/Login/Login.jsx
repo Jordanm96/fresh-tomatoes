@@ -48,12 +48,12 @@ const Login = (props) => {
             onChange={handleChange}
             className= 'login'
             />
-            </div>
           <button>GO</button>
           <label className= 'link'>Don't have an account? {" "}
 
         <Link to='/register'>REGISTER HERE</Link>
           </label>
+            </div>
       </form>
     </>
   );
