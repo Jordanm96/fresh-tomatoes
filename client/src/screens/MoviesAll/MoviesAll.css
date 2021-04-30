@@ -11,6 +11,10 @@
   height: fit-content;
   width: fit-content;
 }
+.movie-card :hover {
+  transform:scale(1.02);
+  color: blue;
+}
 .movie-card img {
   border-radius: 5%;
 }
@@ -18,11 +22,6 @@ img {
   width: 175px;
   height: 250px;
   border-radius: 5%;
-}
-
-#tomato {
-  width: 20px;
-  height: 20px;
 }
 /* How can I get rid of the space inbetween the rating and title */
 .movie-info {
@@ -40,6 +39,9 @@ img {
   justify-content: flex-start;
 }
 
-.movie-card :hover {
-  color: blue;
+#tomato {
+  width: 20px;
+  height: 20px;
+  
 }
+

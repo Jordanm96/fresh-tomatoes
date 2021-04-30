@@ -18,7 +18,10 @@ const MoviesAll = (props) => {
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
             <div className="movie-card">
+              <div className='image-container'>
               <img src={movie.image_url} alt={movie.title} />
+              </div>
+
               {/* Insert my tomato symbol here */}
               {/* Maybe wrap the whole div in a link tag? */}
               <div className="movie-info">
