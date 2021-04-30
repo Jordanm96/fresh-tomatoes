@@ -4,6 +4,7 @@ import Reviews from "../../components/Reviews/Reviews";
 import { getMovie } from "../../services/movies";
 import { deleteReview } from "../../services/reviews";
 import './MovieInfo.css'
+
 const MovieInfo = (props) => {
   const [movieInfo, setMovieInfo] = useState(null);
   const { id } = useParams();

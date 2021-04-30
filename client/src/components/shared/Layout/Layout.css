@@ -8,7 +8,9 @@
 .layout-children {
   background-color: #FFFFFF;
   /* This min-height made my white background longer so the footer would stay at the bottom */
+  /* height: fit-content; */
   min-height: 85vh;
+  /* height: 100%; */
 }
 footer {
   background: rgb(42, 44, 50, .9);

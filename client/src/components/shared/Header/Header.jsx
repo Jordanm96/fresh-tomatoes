@@ -14,7 +14,9 @@ const Header = (props) => {
         <div className='links'>
           <Link to="/movies">Movies</Link>
           <p>Hi, {currentUser.username}</p>
+          <Link to='/movies'>
           <button onClick={handleLogout}>LOG OUT</button>
+          </Link>
         </div>
       ) : (
         <div className='links'>
