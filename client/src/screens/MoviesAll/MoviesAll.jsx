@@ -42,7 +42,7 @@ const MoviesAll = (props) => {
                     </p>
                   </>
                 )}
-                <p>{movie.title}</p>
+                <p>{movie.title.length >= 16 ? `${movie.title.substring(0,17)}...` : movie.title} </p>
               </div>
             </div>
           </Link>

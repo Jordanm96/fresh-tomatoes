@@ -1,10 +1,10 @@
 nav {
   margin: 0 auto;
+  margin-bottom: 20px;
   width: 90%;
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0;
   background-color: #EEEEEE;
   border: 2px solid #707070;
-
 }
