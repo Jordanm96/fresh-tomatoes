@@ -16,7 +16,10 @@ img {
   width: 175px;
   height: 250px;
   border-radius: 5%;
-
+}
+#tomato {
+  width: 20px;
+  height: 20px;
 }
 /* How can I get rid of the space inbetween the rating and title */
 .words {

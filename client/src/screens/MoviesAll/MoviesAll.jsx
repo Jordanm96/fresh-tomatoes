@@ -12,8 +12,8 @@ const MoviesAll = (props) => {
 
   return (
     <div>
-      <Nav movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit}/>
       <h3>FIND A MOVIE</h3>
+      <Nav movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit}/>
       <div className="movies-container">
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
@@ -25,7 +25,10 @@ const MoviesAll = (props) => {
                 {movie.rating === 0 ? (
                   <p>No reviews added</p>
                 ) : (
-                  <p>{movie.rating}%</p>
+                    <>
+                  <img id='tomato'src='https://cdn.iconscout.com/icon/free/png-512/tomato-vegetable-emoj-symbol-food-30690.png' />
+                      <p>{movie.rating}%</p>
+                      </>
                 )}
                 <p>{movie.title}</p>
               </div>
