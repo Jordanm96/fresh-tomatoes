@@ -23,6 +23,9 @@ img {
   height: 250px;
   border-radius: 5%;
 }
+img :hover {
+  
+}
 /* How can I get rid of the space inbetween the rating and title */
 .movie-info {
   display: flex;
