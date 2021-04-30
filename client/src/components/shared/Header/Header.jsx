@@ -11,17 +11,17 @@ const Header = (props) => {
       <h1>Fresh Tomatoes</h1>
       </Link>
       {currentUser ? (
-        <>
+        <div className='links'>
           <Link to="/movies">Movies</Link>
           <p>Hi, {currentUser.username}</p>
           <button onClick={handleLogout}>LOG OUT</button>
-        </>
+        </div>
       ) : (
-        <>
+        <div className='links'>
           <Link to="/movies">Movies</Link>
           <Link to="/login">Log In</Link>
           <Link to="/register">Register</Link>
-        </>
+        </div>
       )}
 
     </header>

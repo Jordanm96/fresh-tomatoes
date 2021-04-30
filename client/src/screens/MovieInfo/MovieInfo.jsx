@@ -29,7 +29,7 @@ const MovieInfo = (props) => {
   const { title, director, info, rating, image_url } = movieInfo;
   
   return (
-    <div>
+    <div className='movie-info'>
       <div key={movieInfo.id}>
         <h3>{title}</h3>
         <p>Director: {director}</p>

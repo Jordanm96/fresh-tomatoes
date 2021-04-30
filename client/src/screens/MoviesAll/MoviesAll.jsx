@@ -21,7 +21,7 @@ const MoviesAll = (props) => {
               <img src={movie.image_url} alt={movie.title} />
               {/* Insert my tomato symbol here */}
               {/* Maybe wrap the whole div in a link tag? */}
-              <div className="words">
+              <div className="movie-info">
                 {movie.rating === 0 ? (
                   <p>No reviews added</p>
                 ) : (
