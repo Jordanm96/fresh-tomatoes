@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './Nav.css'
 // Sort and Search will go here
 const Nav = (props) => {
   // const { movies } = props;
@@ -32,7 +33,7 @@ const Nav = (props) => {
       {/* In here is where the sort and search bar will go */}
       <p>WELCOME</p>
       <form className="sort-container" onSubmit={handleSubmit}>
-            <label htmlFor="sort">SORT BY:</label>
+        <label htmlFor="sort">SORT BY:</label>
             <select className="sort" onChange={handleChange}>
                 <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
                 <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
@@ -44,9 +45,9 @@ const Nav = (props) => {
   )
 
   return (
-    <>
+    <nav>
       {currentUser ? authenticatedOptions : unauthenticatedOptions}
-    </>
+    </nav>
   );
 };
 
