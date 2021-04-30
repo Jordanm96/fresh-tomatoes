@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import './Login.css'
 const Login = (props) => {
   const [formData, setFormData] = useState({
     username: '',
@@ -18,34 +19,45 @@ const Login = (props) => {
   }
 
   return (
-    <div>
+    <>
+      <div className='heading'>
       <h3>LOG IN</h3>
-      <form onSubmit= {(e) => {
+      </div>
+
+      <form className='user-form' onSubmit= {(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}>
-        <label>
+        <div className='inputs'>
+
+        <label className= 'login'>
           Username:
+          </label>
           <input
             type='text'
             name='username'
             value={username} 
-            onChange={handleChange} 
-          />
-        </label>
-        <label>
+            onChange={handleChange}
+            className= 'login'
+            />
+        <label className= 'login'>
           Password:
+          </label>
           <input
             type='password'
             name='password'
             value={password}
-            onChange={handleChange} 
-          />
-        </label>
-        <button>GO</button>
+            onChange={handleChange}
+            className= 'login'
+            />
+          <button>GO</button>
+          <label className= 'link'>Don't have an account? {" "}
+
         <Link to='/register'>REGISTER HERE</Link>
+          </label>
+            </div>
       </form>
-    </div>
+    </>
   );
 };
 

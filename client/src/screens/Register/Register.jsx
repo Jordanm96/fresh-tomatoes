@@ -20,39 +20,47 @@ const Register = (props) => {
 
 
   return (
-    <div>
+    <>
+          <div className='heading'>
+
       <h3>REGISTER</h3>
-      <form onSubmit= {(e) => {
+      </div>
+      <form className='user-form' onSubmit= {(e) => {
         e.preventDefault();
         handleRegister(formData);
       }}>
-        <label>
+        <div className='inputs'>
+
+        <label className= 'login'>
           Username:
+          </label>
           <input
             type='text'
             name='username'
             value={username} 
-            onChange={handleChange} 
+            onChange={handleChange}
+            className= 'login' 
           />
-        </label>
-        <label>
+        <label className= 'login'>
           Email:
+          </label>
           <input
             type='text'
             name='email'
             value={email} 
-            onChange={handleChange} 
+            onChange={handleChange}
+            className= 'login' 
           />
-        </label>
-        <label>
+        <label className= 'login'>
           Password:
+          </label>
           <input
             type='password'
             name='password'
             value={password}
-            onChange={handleChange} 
+            onChange={handleChange}
+            className= 'login' 
           />
-        </label>
         {/* <label>
           Password Confirm:
           <input
@@ -62,10 +70,14 @@ const Register = (props) => {
             onChange={handleChange} 
           />
         </label> */}
-        <button>GO</button>
+          <button>GO</button>
+          <label className= 'link'>Already have an account? {" "}
         <Link to='/login'>LOG IN HERE</Link>
+          </label>
+        </div>
+
       </form>
-    </div>
+    </>
   );
 };
 

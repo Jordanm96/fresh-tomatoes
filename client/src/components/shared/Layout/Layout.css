@@ -1,14 +1,25 @@
 .layout {
   width: 80%;
-  /* height: 100%; */
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
 }
 .layout-children {
   background-color: #FFFFFF;
-  height: 100%;
-  margin-bottom: 0;
+  /* This min-height made my white background longer so the footer would stay at the bottom */
+  /* height: fit-content; */
+  min-height: 85vh;
+  /* height: 100%; */
 }
-
+footer {
+  background: rgb(42, 44, 50, .9);
+  color: white;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 @media only screen and (max-width: 600px) {
   .layout-children {
     height: 100%;
