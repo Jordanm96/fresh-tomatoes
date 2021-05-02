@@ -35,12 +35,12 @@ const MainContainer = (props) => {
       case "name-descending":
         setQueriedMovies(ZA(queriedMovies));
         break;
-      case "rating-ascending":
-        setQueriedMovies(lowestFirst(queriedMovies));
-        break;
-      case "rating-descending":
-        setQueriedMovies(highestFirst(queriedMovies));
-        break;
+      // case "rating-ascending":
+      //   setQueriedMovies(lowestFirst(queriedMovies));
+      //   break;
+      // case "rating-descending":
+      //   setQueriedMovies(highestFirst(queriedMovies));
+      //   break;
       default:
         break;
     }
