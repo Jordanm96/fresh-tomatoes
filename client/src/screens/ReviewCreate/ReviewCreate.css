@@ -32,17 +32,21 @@
   margin: 0 auto;
   margin-left: 20px;
 }
-/* .cr-grid form {
-  grid-area: review;
-  align-self: center;
-  justify-self: start;
 
-} */
-/* .review {
-  grid-area: review;
-  grid-row: 0/1;
+@media only screen and (max-width: 1000px) {
+.cr-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 90%;
+  margin: 0 auto;
 }
-.rating {
-  grid-area: rating;
-  grid-row: 1;
-} */
+.left-info {
+  width: 90%;
+  margin: 0 auto;
+}
+.right-info {
+  width: 90%;
+  justify-self: center;
+}
+}

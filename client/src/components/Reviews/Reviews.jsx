@@ -7,7 +7,7 @@ const Reviews = (props) => {
   const { handleDelete } = props;
   const { currentUser } = props;
 
-  const title = movieInfo.title.toUpperCase();
+  // const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
 
   if (!reviews) {
