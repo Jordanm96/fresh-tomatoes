@@ -18,8 +18,8 @@ const Nav = (props) => {
         <label htmlFor="sort">SORT BY:</label>
         <select className="sort" onChange={handleChange}>
           <option defaultValue>-- Select --</option>
-          <option value="rating-descending">&nbsp; Highest Rated &nbsp;</option>
-          <option value="rating-ascending">&nbsp; Lowest Rated &nbsp;</option>
+          {/* <option value="rating-descending">&nbsp; Highest Rated &nbsp;</option> */}
+          {/* <option value="rating-ascending">&nbsp; Lowest Rated &nbsp;</option> */}
           <option className="option" value="name-ascending">
             &nbsp; Alphabetically, A-Z &nbsp;
           </option>
@@ -37,8 +37,8 @@ const Nav = (props) => {
         <label htmlFor="sort">SORT BY:</label>
         <select className="sort" onChange={handleChange}>
           <option defaultValue>-- Select --</option>
-          <option value="rating-descending">&nbsp; Highest Rated &nbsp;</option>
-          <option value="rating-ascending">&nbsp; Lowest Rated &nbsp;</option>
+          {/* <option value="rating-descending">&nbsp; Highest Rated &nbsp;</option> */}
+          {/* <option value="rating-ascending">&nbsp; Lowest Rated &nbsp;</option> */}
           <option className="option" value="name-ascending">
             &nbsp; Alphabetically, A-Z &nbsp;
           </option>
