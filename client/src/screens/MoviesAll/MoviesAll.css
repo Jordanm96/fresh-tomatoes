@@ -31,8 +31,6 @@ img {
   border-radius: 5%;
 }
 
-
-/* How can I get rid of the space inbetween the rating and title */
 .movie-info {
   display: flex;
   flex-direction: column;

@@ -10,6 +10,8 @@
   "movie review"
   "movie review";
   padding: 40px;
+  margin-bottom: 40px;
+
 }
 .left-info {
   grid-area: movie;
@@ -23,12 +25,10 @@
 }
 .right-info {
   grid-area: review;
-  /* align-self: center; */
   justify-self: start;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* align-items: center; */
   margin: 0 auto;
   margin-left: 20px;
 }

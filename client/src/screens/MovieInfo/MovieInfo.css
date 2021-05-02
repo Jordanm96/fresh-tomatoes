@@ -16,8 +16,7 @@
   grid-template-areas: 
   "image header"
   "info info"
-  "reviews reviews"
-  ;
+  "reviews reviews";
   justify-content: center;
   margin: 30px 20px 30px 20px;
 }
@@ -25,6 +24,7 @@
 .left-container {
   grid-area: image;
   justify-self: center;
+  align-self: center;
   width: 275px;
   height: 350px;
 }
@@ -59,7 +59,6 @@
 .reviews-container {
   grid-area: reviews;
 }
-/* This is for Movie Info and Reviews for "" */
 .subheading {
   background-color:#EEEEEE;
   font-size: 20px;

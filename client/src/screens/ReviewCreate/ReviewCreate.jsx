@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getMovie } from "../../services/movies";
 import StarRatings from "react-star-ratings";
-import './ReviewCreate.css'
+import "./ReviewCreate.css";
 const ReviewCreate = (props) => {
   const [formData, setFormData] = useState({
     content: "",
@@ -45,39 +45,27 @@ const ReviewCreate = (props) => {
         <h3>RATE & REVIEW</h3>
       </div>
       <div className="cr-grid">
-        <div className='left-info'>
-        <h2>{movieInfo.title}</h2>
-        <img src={movieInfo.image_url} alt={movieInfo.title} />
+        <div className="left-info">
+          <h2>{movieInfo.title}</h2>
+          <img src={movieInfo.image_url} alt={movieInfo.title} />
         </div>
-        <form className='right-info'
-            onSubmit={(e) => {
+        <form
+          className="right-info"
+          onSubmit={(e) => {
             e.preventDefault();
             handleCreateReview(id, formData);
           }}
         >
-          {/* <label className='review'>
-            Review: */}
-            <textarea
-              rows="5"
-              type="text"
-              name="content"
-              placeholder="What did you think of the movie?"
-              value={content}
-              onChange={handleChange}
-            />
-          {/* </label> */}
-          {/* <label>Rating:
-          <select name='rating' value={rating} onChange={handleChange}>
-            <option defaultValue>-- Select --</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            </select>
-        </label> */}
+          <textarea
+            rows="5"
+            type="text"
+            name="content"
+            placeholder="What did you think of the movie?"
+            value={content}
+            onChange={handleChange}
+          />
 
-          <label className='rating'>
+          <label className="rating">
             Rating:
             <StarRatings
               rating={rating}
