@@ -8,16 +8,14 @@
 .review-card {
   width: 40%;
   height: 25%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 2px solid black;
   margin: 10px;
   padding-bottom: 10px;
   line-height: 2.6;
-
 }
 @media only screen and (max-width: 1000px) {
-.review-card {
-  width: 100%;
-}
-
+  .review-card {
+    width: 100%;
+  }
 }

@@ -68,7 +68,7 @@ const MovieEdit = (props) => {
 
           <label className="login">Plot Summary:</label>
           <textarea
-            rows="10"
+            rows="8"
             type="text"
             name="info"
             value={info}

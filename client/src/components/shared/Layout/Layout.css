@@ -9,8 +9,6 @@
   background-color: #FFFFFF;
   /* This min-height made my white background longer so the footer would stay at the bottom */
   min-height: 85vh;
-  /* height: fit-content; */
-  /* height: 100%; */
 }
 .heading {
   margin: 0 auto;
