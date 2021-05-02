@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllMovies, postMovie, putMovie } from "../services/movies";
 import { postReviewToMovie } from "../services/reviews";
-import { AZ, ZA, lowestFirst, highestFirst } from "../utils/sort";
+import { AZ, ZA } from "../utils/sort";
 import MoviesAll from "../screens/MoviesAll/MoviesAll";
 import MovieInfo from "../screens/MovieInfo/MovieInfo";
 import MovieCreate from "../screens/MovieCreate/MovieCreate";
