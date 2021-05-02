@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { getMovie } from "../../services/movies";
-import StarRatings from 'react-star-ratings';
-
+import StarRatings from "react-star-ratings";
+import './ReviewCreate.css'
 const ReviewCreate = (props) => {
   const [formData, setFormData] = useState({
-    content: '',
-    rating: 0
+    content: "",
+    rating: 0,
   });
   const [movieInfo, setMovieInfo] = useState(null);
   const { content, rating } = formData;
@@ -28,40 +28,45 @@ const ReviewCreate = (props) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleRating = (e) => {
     setFormData((prevState) => ({
       ...prevState,
-      rating: e
+      rating: e,
     }));
-  }
+  };
 
   return (
     <>
-          <div className='heading'>
-
-      <h3>RATE & REVIEW</h3>
+      <div className="heading">
+        <h3>RATE & REVIEW</h3>
       </div>
-      {/* Here I need to render the movie title and image */}
-      <p>{movieInfo.title}</p>
-      <img src={movieInfo.image_url} alt={movieInfo.title} />
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleCreateReview(id, formData);
-      }}>
-        <label>Review:
-          <textarea
-            type='text'
-            name='content'
-            placeholder='What did you think of the movie?'
-            value={content}
-            onChange={handleChange}
-          />
-        </label>
-        {/* <label>Rating:
+      <div className="cr-grid">
+        <div className='left-info'>
+        <h2>{movieInfo.title}</h2>
+        <img src={movieInfo.image_url} alt={movieInfo.title} />
+        </div>
+        <form className='right-info'
+            onSubmit={(e) => {
+            e.preventDefault();
+            handleCreateReview(id, formData);
+          }}
+        >
+          {/* <label className='review'>
+            Review: */}
+            <textarea
+              rows="5"
+              type="text"
+              name="content"
+              placeholder="What did you think of the movie?"
+              value={content}
+              onChange={handleChange}
+            />
+          {/* </label> */}
+          {/* <label>Rating:
           <select name='rating' value={rating} onChange={handleChange}>
             <option defaultValue>-- Select --</option>
             <option>1</option>
@@ -72,18 +77,22 @@ const ReviewCreate = (props) => {
             </select>
         </label> */}
 
-        <label>Rating:
-        <StarRatings
-          rating={rating}
-          starRatedColor="yellow"
-          changeRating={handleRating}
-          numberOfStars={5}
-          name='rating'
-        />
-        </label>
+          <label className='rating'>
+            Rating:
+            <StarRatings
+              rating={rating}
+              starRatedColor="red"
+              changeRating={handleRating}
+              numberOfStars={5}
+              name="rating"
+              starDimension="25px"
+              starSpacing="5px"
+            />
+          </label>
 
-        <button>ADD</button>
-      </form>
+          <button>ADD</button>
+        </form>
+      </div>
     </>
   );
 };

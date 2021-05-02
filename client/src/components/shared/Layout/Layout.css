@@ -3,14 +3,29 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-
+  min-height: 100vh;
 }
 .layout-children {
   background-color: #FFFFFF;
   /* This min-height made my white background longer so the footer would stay at the bottom */
-  /* height: fit-content; */
   min-height: 85vh;
+  /* height: fit-content; */
   /* height: 100%; */
+}
+.heading {
+  margin: 0 auto;
+  background-color: #FA320A;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  width: 90%;
+}
+h3 {
+  margin: 0 auto;
+  width: fit-content;
+  background-color: white;
+  padding: 10px;
+  font-size: 30px;
+  padding: 0px 15px;
 }
 footer {
   background: rgb(42, 44, 50, .9);
@@ -21,7 +36,13 @@ footer {
   align-items: center;
 } 
 @media only screen and (max-width: 600px) {
+  .layout {
+    width: 90%;
+  }
   .layout-children {
     height: 100%;
+  }
+  h3 {
+    font-size: 20px;
   }
 }
