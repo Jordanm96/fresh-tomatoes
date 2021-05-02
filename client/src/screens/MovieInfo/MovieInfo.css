@@ -2,3 +2,69 @@
   width: 100px;
   height: 100px;
 } */
+.movie-info-container {
+  width: 70%;
+  background-color:#EEEEEE;
+  border: 2px solid #707070;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.movie-grid {
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-template-areas: 
+  "image header"
+  "info info"
+  "reviews reviews"
+  ;
+  justify-content: center;
+  margin: 30px 20px 30px 20px;
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+
+}
+
+.left-container {
+  grid-area: image;
+  justify-self: center;
+}
+.left-container {
+  width: 275px;
+  height: 350px;
+}
+
+.right-container {
+  grid-area: header;
+  justify-self: start;
+  align-self: center;
+
+}
+.two-third {
+  grid-area: info;
+}
+.two-third  .heading {
+  margin-bottom: 30px;
+}
+.reviews-container .heading {
+  margin-bottom: 30px;
+}
+.info {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
+.reviews-container {
+  grid-area: reviews;
+}
+
+
+
+
+
+/* This is for Movie Info and Reviews for "" */
+.subheading {
+  background-color:#EEEEEE;
+  font-size: 20px;
+  margin-left: 100px;
+}

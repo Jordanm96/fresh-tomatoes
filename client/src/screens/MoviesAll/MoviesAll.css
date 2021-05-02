@@ -12,17 +12,24 @@
   width: fit-content;
 }
 .movie-card :hover {
-  transform:scale(1.02);
   color: blue;
+}
+.darken {
+  background-color:black;
+  border-radius: 5%;
 }
 .movie-card img {
   border-radius: 5%;
+}
+.movie-card img:hover {
+  opacity: .8;
 }
 img {
   width: 175px;
   height: 250px;
   border-radius: 5%;
 }
+
 
 /* How can I get rid of the space inbetween the rating and title */
 .movie-info {

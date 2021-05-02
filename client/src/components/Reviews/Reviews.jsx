@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import StarRatings from "react-star-ratings";
+import "./Reviews.css";
 
 const Reviews = (props) => {
   const { movieInfo } = props;
@@ -19,13 +20,14 @@ const Reviews = (props) => {
 
   return (
     <div className="reviews-container">
-      <h3>REVIEWS FOR {title}</h3>
+      <div className="heading">
+        <h3 className='subheading'>REVIEWS FOR {title}</h3>
+      </div>
       {currentUser ? (
         <Link to={`/movies/${movieInfo.id}/reviews`}>
           <button>ADD REVIEW</button>
         </Link>
       ) : null}
-
       {reviews.map((review) => (
         <div key={review.id} className="review-card">
           <p>"{review.content}"</p>
