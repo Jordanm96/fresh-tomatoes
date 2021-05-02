@@ -23,11 +23,10 @@ const MoviesAll = (props) => {
         {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
             <div className="movie-card">
-              <div className='darken'>
-
-              <div className="image-container">
-                <img src={movie.image_url} alt={movie.title} />
-              </div>
+              <div className="darken">
+                <div className="image-container">
+                  <img src={movie.image_url} alt={movie.title} />
+                </div>
               </div>
               <div className="movie-info">
                 {movie.rating === 0 ? (
@@ -45,7 +44,11 @@ const MoviesAll = (props) => {
                     </p>
                   </>
                 )}
-                <p>{movie.title.length >= 16 ? `${movie.title.substring(0,17)}...` : movie.title} </p>
+                <p>
+                  {movie.title.length >= 16
+                    ? `${movie.title.substring(0, 17)}...`
+                    : movie.title}{" "}
+                </p>
               </div>
             </div>
           </Link>

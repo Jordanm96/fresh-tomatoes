@@ -1,11 +1,21 @@
-import api from './api-helper';
+import api from "./api-helper";
 
 export const postReviewToMovie = async (movieId, reviewData) => {
-  const resp = await api.post(`/movies/${movieId}/reviews`, { review: reviewData });
-  return resp.data
-}
+  try {
+    const resp = await api.post(`/movies/${movieId}/reviews`, {
+      review: reviewData,
+    });
+    return resp.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 export const deleteReview = async (id) => {
-  const resp = await api.delete(`/reviews/${id}`);
-  return resp.data;
-}
+  try {
+    const resp = await api.delete(`/reviews/${id}`);
+    return resp.data;
+  } catch (error) {
+    throw error;
+  }
+};

@@ -14,69 +14,60 @@ const MovieCreate = (props) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
   return (
     <>
-      <div className='heading'>
-      <h3>ADD A MOVIE</h3>
+      <div className="heading">
+        <h3>ADD A MOVIE</h3>
       </div>
-      <form className='user-form' onSubmit={(e) => {
-        e.preventDefault();
-        handleCreateMovie(formData);
-      }}>
-                <div className='inputs'>
-
-        <label className= 'login'>
-          Title:
-          </label>
+      <form
+        className="user-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleCreateMovie(formData);
+        }}
+      >
+        <div className="inputs">
+          <label className="login">Title:</label>
           <input
             type="text"
             name="title"
             value={title}
             onChange={handleChange}
-            className= 'login'
+            className="login"
           />
 
-        <label className= 'login'>
-          Director:
-          </label>
+          <label className="login">Director:</label>
           <input
             type="text"
             name="director"
             value={director}
             onChange={handleChange}
-            className= 'login'
+            className="login"
           />
 
-        <label className= 'login'>
-          Plot Summary:
-          </label>
+          <label className="login">Plot Summary:</label>
           <textarea
             type="text"
             rows="8"
             name="info"
             value={info}
             onChange={handleChange}
-            className='textarea'
-            // className='login'
-            // rows={20}
+            className="textarea"
           />
 
-        <label className= 'login'>
-          Image URL:
-          </label>
+          <label className="login">Image URL:</label>
           <input
             type="text"
             name="image_url"
             value={image_url}
             onChange={handleChange}
-            className= 'login'
+            className="login"
           />
-        <button>CREATE</button>
+          <button>CREATE</button>
         </div>
-
       </form>
     </>
   );

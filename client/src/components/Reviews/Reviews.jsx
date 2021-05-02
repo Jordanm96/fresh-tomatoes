@@ -7,7 +7,6 @@ const Reviews = (props) => {
   const { handleDelete } = props;
   const { currentUser } = props;
 
-  // const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
 
   if (!reviews) {
@@ -15,33 +14,31 @@ const Reviews = (props) => {
   }
 
   return (
-
     <div className="reviews-container">
       <div className="heading">
-        <h3 className='subheading'>REVIEWS</h3>
+        <h3 className="subheading">REVIEWS</h3>
       </div>
       {currentUser ? (
         <Link to={`/movies/${movieInfo.id}/reviews`}>
           <button>ADD REVIEW</button>
         </Link>
       ) : null}
-      <div className='all-reviews'>
-
-      {reviews.map((review) => (
-        <div key={review.id} className="review-card">
-          <p>"{review.content}"</p>
-          <StarRatings
-            rating={review.rating}
-            starDimension="25px"
-            starSpacing="5px"
-            starRatedColor="red"
+      <div className="all-reviews">
+        {reviews.map((review) => (
+          <div key={review.id} className="review-card">
+            <p>"{review.content}"</p>
+            <StarRatings
+              rating={review.rating}
+              starDimension="25px"
+              starSpacing="5px"
+              starRatedColor="red"
             />
-          <p>- {review.user.username}</p>
-          {currentUser?.username === review?.user.username ? (
-            <button onClick={() => handleDelete(review.id)}>DELETE</button>
+            <p>- {review.user.username}</p>
+            {currentUser?.username === review?.user.username ? (
+              <button onClick={() => handleDelete(review.id)}>DELETE</button>
             ) : null}
-        </div>
-      ))}
+          </div>
+        ))}
       </div>
     </div>
   );
