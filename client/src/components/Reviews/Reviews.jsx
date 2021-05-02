@@ -29,15 +29,6 @@ const Reviews = (props) => {
 
       {reviews.map((review) => (
         <div key={review.id} className="review-card">
-<<<<<<< HEAD
-          <p>"{review?.content}"</p>
-          <p>Rating: {review?.rating}/5</p>
-          {/* I am getitng undefined after I delete a review because it is trying to find the review I just deleted I think */}
-          <p>- {review?.user.username}</p>
-          {console.log(review.user.username)}
-          
-          {currentUser.username === review?.user.username ? (
-=======
           <p>"{review.content}"</p>
           <StarRatings
             rating={review.rating}
@@ -47,7 +38,6 @@ const Reviews = (props) => {
             />
           <p>- {review.user.username}</p>
           {currentUser?.username === review?.user.username ? (
->>>>>>> 5fa6cd4660ee3a37f589baaea1feda813decd539
             <button onClick={() => handleDelete(review.id)}>DELETE</button>
             ) : null}
         </div>
