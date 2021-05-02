@@ -94,7 +94,7 @@ const MainContainer = (props) => {
         <MovieInfo currentUser={currentUser} movies={movies} setMovies={setMovies}/>
       </Route>
 
-      <Route path="/movies">
+      <Route path="/">
         <MoviesAll movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit} />
       </Route>
     </Switch>

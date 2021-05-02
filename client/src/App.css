@@ -1,5 +1,6 @@
 /* * {
   border: 2px solid red;
+  box-sizing: border-box;
 } */
 .App {
   text-align: center;
@@ -10,6 +11,13 @@ body {
 }
 a {
   text-decoration: none;
+}
+p {
+  margin-bottom: 0;
+}
+h3 {
+  margin-top: 0;
+  padding: 20px;
 }
 
 /* .App-logo {

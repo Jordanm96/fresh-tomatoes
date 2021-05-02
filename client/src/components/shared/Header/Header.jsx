@@ -8,20 +8,23 @@ const Header = (props) => {
   return (
     <header>
       <Link to="/movies">
-      <h1>Fresh Tomatoes</h1>
+        <div className='title'>
+        <h1>Fresh</h1>
+        <h1>Tomatoes</h1>
+        </div>
       </Link>
       {currentUser ? (
-        <>
+        <div className='links'>
+          <p className='hi'>Hi, {currentUser.username}</p>
           <Link to="/movies">Movies</Link>
-          <p>Hi, {currentUser.username}</p>
-          <button onClick={handleLogout}>LOG OUT</button>
-        </>
+          <Link to='/movies' onClick={handleLogout}>Log Out</Link>
+        </div>
       ) : (
-        <>
+        <div className='links'>
           <Link to="/movies">Movies</Link>
           <Link to="/login">Log In</Link>
           <Link to="/register">Register</Link>
-        </>
+        </div>
       )}
 
     </header>
