@@ -1,4 +1,4 @@
-# Healthy Tomatoes
+# Fresh Tomatoes
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -19,7 +19,7 @@
 
 ## Overview
 
-**Healthy Tomatoes** (inspired by rotten tomatoes) is an application that will allow users to access a list of movies with reviews written by the users themselves. People who access this app will create an account so that they may view and add movies they have watched. Movies added by the user will include the title, poster image, and a brief plot description. Aside from the details of the movie, each film will also contain a list of user reviews. Healthy Tomatoes allows the user to become a movie critic, as they write their own personal opinions on the movie and leave it with a rating to help other users decide what to watch next.
+**Fresh Tomatoes** (inspired by rotten tomatoes) is an application that will allow users to access a list of movies with reviews written by the users themselves. People who access this app will create an account so that they may view and add movies they have watched. Movies added by the user will include the title, poster image, and a brief plot description. Aside from the details of the movie, each film will also contain a list of user reviews. Fresh Tomatoes allows the user to become a movie critic, as they write their own personal opinions on the movie and leave it with a rating to help other users decide what to watch next.
 
 <br>
 
@@ -149,28 +149,26 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal    |    H     |     1 hrs      |      hrs     |     hrs    |
-| Back-end Setup    |    H     |     3 hrs      |      hrs     |     hrs    |
-| Layout    |    H     |     3 hrs      |      hrs     |     hrs    |
-| Header   |    H     |     2 hrs      |      hrs     |     hrs    |
-| Footer    |    L     |     2 hrs      |      hrs     |     hrs    |
-| Login/Register Form    |    L     |     3 hrs      |      hrs     |     hrs    |
-|  Movies   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Movie Detail   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Movie Create    |    L     |     3 hrs      |      hrs     |     hrs    |
-| Movie Edit    |    L     |     3 hrs      |      hrs     |     hrs    |
-| Review Create    |    H     |     3 hrs      |      hrs     |     hrs    |
-| Review Delete    |    L     |     3 hrs      |      hrs     |     hrs    |
-| Header CSS   |    H     |     2 hrs      |      hrs     |     hrs    |
-| Footer CSS   |    L     |     1 hrs      |      hrs     |     hrs    |
-| Login/Register Form CSS    |    H     |     3 hrs      |      hrs     |     hrs    |
-|  Movies CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Movie Detail CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Movie Create CSS   |    H     |     3 hrs      |      hrs     |     hrs    |
-| Movie Edit CSS   |    L     |     3 hrs      |      hrs     |     hrs    |
-| Review Create CSS  |    H     |     3 hrs      |      hrs     |     hrs    |
-| Review Delete    |    L     |     1 hrs      |      hrs     |    hrs    |
-| TOTAL               |          |     54 hrs      |      hrs     |     TBD     |
+| Proposal    |    H     |     1 hrs      |      .5 hrs     |     .5 hrs    |
+| Back-end Setup    |    H     |     3 hrs      |      5 hrs     |     5 hrs    |
+| Layout    |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| Header   |    H     |     2 hrs      |     1 hrs     |    1 hrs    |
+| Footer    |    L     |     2 hrs      |     1 hrs     |    1 hrs    |
+| Login/Register Form    |    L     |     3 hrs      |     2 hrs     |   2 hrs    |
+| MoviesAll   |    H     |     3 hrs      |     1 hrs     |    1 hrs    |
+| MovieInfo   |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| MovieCreate    |    L     |     3 hrs      |     1 hrs     |    1 hrs    |
+| MovieEdit    |    L     |     3 hrs      |     1 hrs     |    1 hrs    |
+| Review Create    |    H     |     3 hrs      |     1.5 hrs     |    1.5 hrs    |
+| Review Delete    |    L     |     2 hrs      |     1 hrs     |    1 hrs    |
+| Header CSS   |    H     |     2 hrs      |     .5 hrs     |    .5 hrs    |
+| Footer CSS   |    L     |     1 hrs      |     .5 hrs     |    .5 hrs    |
+| Login/Register Form CSS    |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| MovieCreate/MovieEdit CSS    |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| MoviesAll CSS   |    H     |     3 hrs      |     1 hrs     |    1 hrs    |
+| MovieInfo CSS   |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| ReviewCreate CSS  |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| TOTAL               |          |     49 hrs      |      31 hrs     |     31 hrs    |
 
 <br>
 
@@ -192,8 +190,34 @@ src
 ***
 
 ## Code Showcase
+```
+  def show
+    render json: @movie.as_json(include: [{reviews: {include: :user}}, :user], methods: :rating)
+  end
+
+```
+```
+ <div className="movie-info">
+                {movie.rating === 0 ? (
+                  <p>(No reviews added)</p>
+                ) : (
+                  <>
+                    <p>
+                      {" "}
+                      <img
+                        id="tomato"
+                        src="https://cdn.iconscout.com/icon/free/png-512/tomato-vegetable-emoj-symbol-food-30690.png"
+                        alt="tomato"
+                      />{" "}
+                      {movie.rating}%
+                    </p>
+                  </>
+```
+
 
 
 
 ## Code Issues & Resolutions
+
+1. At first, it was hard to grab information from my reviews and users on my MovieInfo screen. To solve the issue, I ahd to modify the movies controller and my routes in order to make sure the movie data coming back included the review object, and a user object nested within.
 
