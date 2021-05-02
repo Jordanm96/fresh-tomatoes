@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
 import StarRatings from "react-star-ratings";
+import "./Reviews.css";
 
 const Reviews = (props) => {
   const { movieInfo } = props;
   const { handleDelete } = props;
   const { currentUser } = props;
 
-  const title = movieInfo.title.toUpperCase();
+  // const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
-
-  // if (!currentUser) {
-  //   return <h1>Loading...</h1>
-  // }
 
   if (!reviews) {
     return <h3>Loading...</h3>;
   }
 
   return (
+
     <div className="reviews-container">
-      <h3>REVIEWS FOR {title}</h3>
+      <div className="heading">
+        <h3 className='subheading'>REVIEWS</h3>
+      </div>
       {currentUser ? (
         <Link to={`/movies/${movieInfo.id}/reviews`}>
           <button>ADD REVIEW</button>
         </Link>
       ) : null}
+      <div className='all-reviews'>
 
       {reviews.map((review) => (
         <div key={review.id} className="review-card">
@@ -40,16 +41,18 @@ const Reviews = (props) => {
           <p>"{review.content}"</p>
           <StarRatings
             rating={review.rating}
-            starDimension="40px"
-            starSpacing="15px"
-          />
+            starDimension="25px"
+            starSpacing="5px"
+            starRatedColor="red"
+            />
           <p>- {review.user.username}</p>
           {currentUser?.username === review?.user.username ? (
 >>>>>>> 5fa6cd4660ee3a37f589baaea1feda813decd539
             <button onClick={() => handleDelete(review.id)}>DELETE</button>
-          ) : null}
+            ) : null}
         </div>
       ))}
+      </div>
     </div>
   );
 };

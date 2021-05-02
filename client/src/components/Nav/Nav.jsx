@@ -32,7 +32,6 @@ const Nav = (props) => {
   const unauthenticatedOptions = (
     <>
       {/* In here is where the sort and search bar will go */}
-      <p>WELCOME</p>
       <form className="sort-container" onSubmit={handleSubmit}>
         <label htmlFor="sort">SORT BY:</label>
             <select className="sort" onChange={handleChange}>

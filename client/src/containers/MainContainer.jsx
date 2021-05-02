@@ -95,7 +95,7 @@ const MainContainer = (props) => {
       </Route>
 
       <Route path="/">
-        <MoviesAll movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit} />
+        <MoviesAll movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit} sortType={sortType}/>
       </Route>
     </Switch>
   );

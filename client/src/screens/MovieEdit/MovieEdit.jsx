@@ -8,7 +8,7 @@ const MovieEdit = (props) => {
     info: "",
     image_url: "",
   });
-  
+
   const { title, director, info, image_url } = formData;
   const { movies, handleEdit } = props;
   const { id } = useParams();
@@ -28,7 +28,6 @@ const MovieEdit = (props) => {
     }
   }, [movies, id]);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -38,57 +37,55 @@ const MovieEdit = (props) => {
   };
   return (
     <>
-          <div className='heading'>
-
+      <div className="heading">
         <h3>EDIT MOVIE</h3>
-        </div>
-      <form className='user-form'
+      </div>
+      <form
+        className="user-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleEdit(id, formData);
         }}
       >
-        <div className='inputs'>
-
-        <label className= 'login'>
-          Title:
-          </label>
+        <div className="inputs">
+          <label className="login">Title:</label>
           <input
             type="text"
             name="title"
             value={title}
             onChange={handleChange}
-            className= 'login'
-            />
+            className="login"
+          />
 
-        <label className= 'login'>
-          Director:
-          </label>
+          <label className="login">Director:</label>
           <input
             type="text"
             name="director"
             value={director}
             onChange={handleChange}
-            className= 'login'
-            />
+            className="login"
+          />
 
-        <label className= 'login'>
-          Plot Summary:
-        </label>
-          <input type="text" name="info" value={info} onChange={handleChange} className= 'login'/>
+          <label className="login">Plot Summary:</label>
+          <textarea
+            rows="10"
+            type="text"
+            name="info"
+            value={info}
+            onChange={handleChange}
+            className="login"
+          />
 
-        <label className= 'login'>
-          Image URL:
-          </label>
+          <label className="login">Image URL:</label>
           <input
             type="text"
             name="image_url"
             value={image_url}
             onChange={handleChange}
-            className= 'login'
-            />
-        <button>SAVE CHANGES</button>
-            </div>
+            className="login"
+          />
+          <button>SAVE CHANGES</button>
+        </div>
       </form>
     </>
   );
