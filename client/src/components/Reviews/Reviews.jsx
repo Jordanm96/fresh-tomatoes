@@ -10,10 +10,6 @@ const Reviews = (props) => {
   const title = movieInfo.title.toUpperCase();
   const reviews = movieInfo.reviews;
 
-  // if (!currentUser) {
-  //   return <h1>Loading...</h1>
-  // }
-
   if (!reviews) {
     return <h3>Loading...</h3>;
   }

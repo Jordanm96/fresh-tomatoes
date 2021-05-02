@@ -1,0 +1,48 @@
+.cr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 70%;
+  margin: 0 auto;
+  background-color:#EEEEEE;
+  border: 2px solid #707070;
+  grid-template-areas: 
+  "movie review"
+  "movie review";
+  padding: 40px;
+}
+.left-info {
+  grid-area: movie;
+}
+.cr-grid img {
+  justify-self: center;
+  width: 275px;
+  height: 350px;
+  align-self: center;
+
+}
+.right-info {
+  grid-area: review;
+  /* align-self: center; */
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin: 0 auto;
+  margin-left: 20px;
+}
+/* .cr-grid form {
+  grid-area: review;
+  align-self: center;
+  justify-self: start;
+
+} */
+/* .review {
+  grid-area: review;
+  grid-row: 0/1;
+}
+.rating {
+  grid-area: rating;
+  grid-row: 1;
+} */
