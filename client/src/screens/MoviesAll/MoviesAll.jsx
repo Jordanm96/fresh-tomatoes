@@ -28,7 +28,7 @@ const MoviesAll = (props) => {
               </div>
               <div className="movie-info">
                 {movie.rating === 0 ? (
-                  <p>No reviews added</p>
+                  <p>(No reviews added)</p>
                 ) : (
                   <>
                     <p>
