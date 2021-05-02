@@ -55,7 +55,7 @@ const MovieCreate = (props) => {
           </label>
           <textarea
             type="text"
-            rows="10"
+            rows="8"
             name="info"
             value={info}
             onChange={handleChange}

@@ -1,25 +1,18 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-
-import {
-  getAllMovies,
-  postMovie,
-  putMovie,
-} from "../services/movies";
-
+import { getAllMovies, postMovie, putMovie } from "../services/movies";
+import { postReviewToMovie } from "../services/reviews";
+import { AZ, ZA, lowestFirst, highestFirst } from "../utils/sort";
 import MoviesAll from "../screens/MoviesAll/MoviesAll";
 import MovieInfo from "../screens/MovieInfo/MovieInfo";
 import MovieCreate from "../screens/MovieCreate/MovieCreate";
 import MovieEdit from "../screens/MovieEdit/MovieEdit";
-import { postReviewToMovie } from "../services/reviews";
 import ReviewCreate from "../screens/ReviewCreate/ReviewCreate";
-import { AZ, ZA } from "../utils/sort";
 
 const MainContainer = (props) => {
   const [movies, setMovies] = useState([]);
-  const [queriedMovies, setQueriedMovies] = useState([])
-  const [sortType, setSortType] = useState([])
-
+  const [queriedMovies, setQueriedMovies] = useState([]);
+  const [sortType, setSortType] = useState([]);
 
   const { currentUser } = props;
   const history = useHistory();
@@ -33,27 +26,26 @@ const MainContainer = (props) => {
     fetchMovies();
   }, []);
 
-  const handleSort = type => {
-    setSortType(type)
+  const handleSort = (type) => {
+    setSortType(type);
     switch (type) {
       case "name-ascending":
-        setQueriedMovies(AZ(queriedMovies))
-        break
+        setQueriedMovies(AZ(queriedMovies));
+        break;
       case "name-descending":
-        setQueriedMovies(ZA(queriedMovies))
-        break
-      // case "price-ascending":
-      //   setQueriedProducts(lowestFirst(queriedProducts))
-      //   break
-      // case "price-descending":
-      //   setQueriedProducts(highestFirst(queriedProducts))
-      //   break
+        setQueriedMovies(ZA(queriedMovies));
+        break;
+      case "rating-ascending":
+        setQueriedMovies(lowestFirst(queriedMovies));
+        break;
+      case "rating-descending":
+        setQueriedMovies(highestFirst(queriedMovies));
+        break;
       default:
-        break
+        break;
     }
-  }
-  const handleSubmit = event => event.preventDefault()
-
+  };
+  const handleSubmit = (event) => event.preventDefault();
 
   const handleCreateMovie = async (formData) => {
     const movieData = await postMovie(formData);
@@ -72,18 +64,21 @@ const MainContainer = (props) => {
   };
 
   const handleCreateReview = async (id, formData) => {
-    await postReviewToMovie(id, formData)
+    await postReviewToMovie(id, formData);
     history.push(`/movies/${id}`);
-  }
-  
+  };
+
   return (
     <Switch>
       <Route path="/movies/create">
         <MovieCreate handleCreateMovie={handleCreateMovie} />
       </Route>
-      
+
       <Route path="/movies/:id/reviews">
-        <ReviewCreate currentUser={currentUser} handleCreateReview={handleCreateReview}/>
+        <ReviewCreate
+          currentUser={currentUser}
+          handleCreateReview={handleCreateReview}
+        />
       </Route>
 
       <Route path="/movies/:id/edit">
@@ -91,11 +86,21 @@ const MainContainer = (props) => {
       </Route>
 
       <Route path="/movies/:id">
-        <MovieInfo currentUser={currentUser} movies={movies} setMovies={setMovies}/>
+        <MovieInfo
+          currentUser={currentUser}
+          movies={movies}
+          setMovies={setMovies}
+        />
       </Route>
 
       <Route path="/">
-        <MoviesAll movies={movies} currentUser={currentUser} handleSort={handleSort} handleSubmit={handleSubmit} sortType={sortType}/>
+        <MoviesAll
+          movies={movies}
+          currentUser={currentUser}
+          handleSort={handleSort}
+          handleSubmit={handleSubmit}
+          sortType={sortType}
+        />
       </Route>
     </Switch>
   );

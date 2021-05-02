@@ -18,10 +18,12 @@ p {
 }
 input {
   font-family: 'Mukta', sans-serif;
+  font-size: 15px;
 }
 textarea {
   font-family: 'Mukta', sans-serif;
   min-width: 100%;
+  font-size: 15px;
 }
 h2 {
   font-family: 'Mukta', sans-serif;

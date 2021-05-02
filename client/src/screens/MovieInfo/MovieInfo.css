@@ -25,6 +25,7 @@
 .left-container {
   grid-area: image;
   justify-self: center;
+  align-self: center;
   width: 275px;
   height: 350px;
 }
