@@ -28,8 +28,6 @@
 .left-container {
   grid-area: image;
   justify-self: center;
-}
-.left-container {
   width: 275px;
   height: 350px;
 }
@@ -46,6 +44,9 @@
 .two-third  .heading {
   margin-bottom: 30px;
 }
+.reviews-container {
+  grid-area: reviews;
+}
 .reviews-container .heading {
   margin-bottom: 30px;
 }
@@ -57,14 +58,31 @@
 .reviews-container {
   grid-area: reviews;
 }
-
-
-
-
-
 /* This is for Movie Info and Reviews for "" */
 .subheading {
   background-color:#EEEEEE;
   font-size: 20px;
   margin-left: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .movie-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .movie-info-container {
+    width: 100%;
+  }
+  .left-container {
+    align-self: center;
+  }
+  .subheading {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .movie-info-container {
+    width: 90%;
+  }
+
 }

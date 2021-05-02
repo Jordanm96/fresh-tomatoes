@@ -21,7 +21,7 @@ const Reviews = (props) => {
   return (
     <div className="reviews-container">
       <div className="heading">
-        <h3 className='subheading'>REVIEWS FOR {title}</h3>
+        <h3 className='subheading'>REVIEWS</h3>
       </div>
       {currentUser ? (
         <Link to={`/movies/${movieInfo.id}/reviews`}>
