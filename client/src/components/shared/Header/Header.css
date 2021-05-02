@@ -1,19 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #FA320A;
   color: white;
-  padding: 20px;
+  /* padding: 20px; */
 }
 header a {
   color: white;
+  transition-duration: 0.4s;
+  
 }
 h1 {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 40px;
   font-size: 60px;
+  font-family: 'Freckle Face', cursive;
 }
 .hi {
   margin-top: 0;

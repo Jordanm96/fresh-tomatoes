@@ -42,7 +42,7 @@ const MovieInfo = (props) => {
           ) : (
               <>
               <h2>Audience Score: {rating}%</h2>
-              <img id='popcorn' src='https://freesvg.org/img/PopcornClip.png' />
+              <img id='popcorn' src='https://freesvg.org/img/PopcornClip.png' alt='popcorn' />
             </>
             )}
             <Link to={`/movies/${movieInfo.id}/edit`}>

@@ -15,6 +15,7 @@ const Reviews = (props) => {
   }
 
   return (
+
     <div className="reviews-container">
       <div className="heading">
         <h3 className='subheading'>REVIEWS</h3>
@@ -24,20 +25,24 @@ const Reviews = (props) => {
           <button>ADD REVIEW</button>
         </Link>
       ) : null}
+      <div className='all-reviews'>
+
       {reviews.map((review) => (
         <div key={review.id} className="review-card">
           <p>"{review.content}"</p>
           <StarRatings
             rating={review.rating}
-            starDimension="40px"
-            starSpacing="15px"
-          />
+            starDimension="25px"
+            starSpacing="5px"
+            starRatedColor="red"
+            />
           <p>- {review.user.username}</p>
           {currentUser?.username === review?.user.username ? (
             <button onClick={() => handleDelete(review.id)}>DELETE</button>
-          ) : null}
+            ) : null}
         </div>
       ))}
+      </div>
     </div>
   );
 };

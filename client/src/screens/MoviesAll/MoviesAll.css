@@ -13,6 +13,7 @@
 }
 .movie-card :hover {
   color: blue;
+  font-weight: bold;
 }
 .darken {
   background-color:black;

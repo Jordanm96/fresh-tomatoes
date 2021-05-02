@@ -85,6 +85,8 @@ const ReviewCreate = (props) => {
               changeRating={handleRating}
               numberOfStars={5}
               name="rating"
+              starDimension="25px"
+              starSpacing="5px"
             />
           </label>
 
