@@ -28,7 +28,7 @@ const MovieInfo = (props) => {
     return <h1>Loading....</h1>;
   }
   const { title, director, info, rating, image_url } = movieInfo;
-
+  console.log(movieInfo)
   return (
     <div className="movie-info-container">
       <div className="movie-grid">
