@@ -5,15 +5,13 @@ class MoviesController < ApplicationController
   # GET /movies
   def index
     @movies = Movie.all
-    # render json: @movies, include: :rating
     render json: @movies.as_json(methods: :rating)
-    # Might need to add include: :reviews in order to display the review percentage on MoviesAll screen
   end
 
   # GET /movies/1
   def show
-    # render json: @movie, include: [:reviews, :user, :rating]
     # as_json allows us to include methods
+    # :rating method comes from my movie model
     render json: @movie.as_json(include: [{reviews: {include: :user}}, :user], methods: :rating)
   end
 
