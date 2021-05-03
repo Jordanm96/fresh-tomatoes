@@ -48,9 +48,11 @@ const MovieInfo = (props) => {
               />
             </>
           )}
-          <Link to={`/movies/${movieInfo.id}/edit`}>
-            <button>EDIT MOVIE</button>
-          </Link>
+          {currentUser ? (
+            <Link to={`/movies/${movieInfo.id}/edit`}>
+              <button>EDIT MOVIE</button>
+            </Link>
+          ) : null}
         </div>
 
         <div className="two-third">
